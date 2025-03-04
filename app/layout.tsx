@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
-import { Spline_Sans } from "next/font/google";
+import { Inter, Spline_Sans } from "next/font/google";
 
 import "./styles.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
 
 const splineSans = Spline_Sans({
   variable: "--font-spline-sans",
@@ -9,7 +14,7 @@ const splineSans = Spline_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Polarid",
+  title: "Solarid",
   description: "Digital Identity & Data Sovereignty",
 };
 
@@ -20,7 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={splineSans.variable}>{children}</body>
+      <body className={`${inter.variable} ${splineSans.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

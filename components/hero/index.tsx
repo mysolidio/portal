@@ -7,11 +7,11 @@ export default async function HeroSection() {
     <div className="grid h-screen w-screen place-content-center bg-[#001024]">
       {/* Video background */}
       <div className="size-[min(90vw,620px)] rounded-full bg-linear-[90deg,#731EC8_0%,#2D84BB_100%] backdrop-blur-[80px]" />
-      <div className="absolute inset-auto size-full place-content-center space-y-6 text-center backdrop-blur-lg">
-        <div className="text-[60px] leading-[72px] text-[#21FBFF]">
+      <div className="absolute inset-auto size-full place-content-center space-y-6 text-center text-white backdrop-blur-lg">
+        <div className="text-[60px] leading-[72px]">
           Digital Identity & Data Sovereignty
         </div>
-        <div className="text-[20px] leading-[26px] font-medium text-white">
+        <div className="text-[20px] leading-[26px] font-medium">
           We&#39;re Global Standard for Digital Identity and Data
           Self-Sovereignty in Web3
         </div>

@@ -45,7 +45,7 @@ const HeaderMenu: FC = () => {
           Book a demo
         </button>
       </NavigationMenuList>
-      <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-[#001024]/50 backdrop-blur-lg" />
+      <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-transparent/50 backdrop-blur-lg" />
     </NavigationMenu>
   );
 };

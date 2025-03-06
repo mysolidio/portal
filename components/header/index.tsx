@@ -31,11 +31,10 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed z-50 h-20 w-screen transition-all duration-500 ease-in-out",
+        "fixed z-50 h-20 w-screen transition-all duration-500 ease-in-out has-[[data-slot=navigation-menu-content]]:bg-[#001024]",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
-      <div className="absolute inset-0 bg-[#001024]/80 backdrop-blur-[60px]" />
       <div className="relative container flex h-20 flex-wrap items-center justify-between">
         <LogoWithText size={32} className="text-white" />
         <Menu />

@@ -1,10 +1,11 @@
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 import { FC, memo } from "react";
 
 import {
   NavigationMenu,
   NavigationMenuContent,
   NavigationMenuItem,
-  // NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
@@ -15,14 +16,28 @@ const items = ["solutions", "use cases", "develop", "learn"];
 const HeaderMenu: FC = () => {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className="gap-12">
         {items.map((title, idx) => (
           <NavigationMenuItem key={idx} value={title}>
-            <NavigationMenuTrigger className="font-inter h-14 w-[140px] text-base font-medium text-white capitalize">
+            <NavigationMenuTrigger className="font-inter h-14 border-b border-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white">
               {title}
             </NavigationMenuTrigger>
-            <NavigationMenuContent className="right-0 container flex justify-end bg-transparent text-white">
-              <div className="w-[750px] capitalize">{title}!</div>
+            <NavigationMenuContent className="right-0 container flex justify-end text-white">
+              <div className="grid w-[710px] grid-cols-2 gap-x-10 gap-y-2 pt-2 pb-4">
+                {new Array(5).fill(0).map((_, idx) => (
+                  <Link
+                    key={idx}
+                    href="/"
+                    className="group flex items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
+                  >
+                    Link 0{idx + 1}
+                    <ArrowRight
+                      size={20}
+                      className="hidden transition-all group-hover:inline-block"
+                    />
+                  </Link>
+                ))}
+              </div>
             </NavigationMenuContent>
           </NavigationMenuItem>
         ))}
@@ -30,7 +45,7 @@ const HeaderMenu: FC = () => {
           Book a demo
         </button>
       </NavigationMenuList>
-      <NavigationMenuViewport className="mt-0 !w-screen rounded-none border-0 bg-white/10 backdrop-blur-3xl" />
+      <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-[#001024]/50 backdrop-blur-lg" />
     </NavigationMenu>
   );
 };

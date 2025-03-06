@@ -121,7 +121,7 @@
   --font-inter: var(--font-inter);
 
   /* Spacing */
-  --spacing-15: calc(15 * var(--spacing));
+  --spacing-15: --spacing(15);
 }
 
 @layer base {

@@ -4,10 +4,13 @@ import { Button } from "@/components/ui/button";
 
 export default async function HeroSection() {
   return (
-    <div className="grid h-screen w-screen place-content-center bg-[#001024]">
+    <div className="relative grid h-screen w-screen place-content-center overflow-hidden bg-[#001024]">
       {/* Video background */}
-      <div className="size-[min(90vw,620px)] rounded-full bg-linear-[90deg,#731EC8_0%,#2D84BB_100%] backdrop-blur-[80px]" />
-      <div className="absolute inset-auto size-full place-content-center space-y-6 text-center text-white backdrop-blur-lg">
+      <div className="absolute inset-0 grid place-content-center">
+        <div className="size-[min(90vw,620px)] rounded-full bg-linear-[90deg,#731EC8_0%,#2D84BB_100%] opacity-50" />
+      </div>
+      <div className="absolute inset-0 backdrop-blur-lg" />
+      <div className="relative z-10 flex flex-col items-center justify-center space-y-6 text-center text-white">
         <div className="text-[60px] leading-[72px]">
           Digital Identity & Data Sovereignty
         </div>

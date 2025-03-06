@@ -1,5 +1,3 @@
-import React from "react";
-
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -7,7 +5,7 @@ type Props = {
   className?: string;
 };
 
-export default async function Logo({ size = 24, className = "" }: Props) {
+export default function Logo({ size = 24, className = "" }: Props) {
   const viewBoxSize = 206;
   return (
     <svg

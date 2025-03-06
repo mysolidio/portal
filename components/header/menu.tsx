@@ -41,7 +41,7 @@ const HeaderMenu: FC = () => {
             </NavigationMenuContent>
           </NavigationMenuItem>
         ))}
-        <button className="h-[60px] cursor-pointer rounded-full bg-white px-10 py-5 text-base leading-5 font-medium text-black uppercase">
+        <button className="h-[60px] cursor-pointer rounded-full bg-white/90 px-10 py-5 text-base leading-5 font-medium text-black uppercase transition-colors hover:bg-white">
           Book a demo
         </button>
       </NavigationMenuList>

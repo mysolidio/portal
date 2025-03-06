@@ -19,13 +19,13 @@ export default async function HeroSection() {
           Self-Sovereignty in Web3
         </div>
         <div className="inline-flex items-center gap-2">
-          <Button className="h-15 gap-2.5 rounded-full bg-white !px-8 py-5 text-base leading-5 font-medium text-black uppercase hover:bg-white">
+          <Button className="h-15 gap-2.5 rounded-full bg-white/90 !px-8 py-5 text-base leading-5 font-medium text-black uppercase transition-colors hover:bg-white hover:shadow">
             Start building
             <ArrowUpRight size={20} />
           </Button>
           <Button
             variant="outline"
-            className="h-15 gap-2.5 rounded-full bg-white/10 !px-8 py-5 text-base leading-5 font-medium text-white uppercase hover:bg-white/10 hover:text-white"
+            className="h-15 gap-2.5 rounded-full bg-white/10 !px-8 py-5 text-base leading-5 font-medium text-white uppercase transition-colors hover:bg-white/20 hover:text-white hover:shadow"
           >
             Request a demo
           </Button>

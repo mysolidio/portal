@@ -133,6 +133,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-feature-settings:
+      "liga" off,
+      "clig" off;
   }
   body {
     @apply bg-background text-foreground;

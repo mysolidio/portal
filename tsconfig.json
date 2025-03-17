@@ -19,6 +19,10 @@
       }
     ],
     "paths": {
+      "@/common/*": ["./components/common/*"],
+      "@/icons": ["./components/icons"],
+      "@/icons/*": ["./components/icons/*"],
+      "@/ui/*": ["./components/ui/*"],
       "@/*": ["./*"]
     }
   },

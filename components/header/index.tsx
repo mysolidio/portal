@@ -35,7 +35,7 @@ export default function Header() {
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
-      <div className="relative container flex h-20 flex-wrap items-center justify-between">
+      <div className="relative flex h-20 flex-wrap items-center justify-between p-6 lg:container lg:p-0">
         <LogoWithText size={32} className="text-white" />
         <Menu />
       </div>

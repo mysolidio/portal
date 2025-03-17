@@ -5,31 +5,31 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer",
+  "inline-flex items-center justify-center gap-2.5 whitespace-nowrap rounded-md text-sm font-medium transition-[color,box-shadow] disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 [&_svg]:shrink-0 outline-hidden cursor-pointer transition-colors transition-shadow",
   {
     variants: {
       variant: {
-        default:
-          "bg-primary text-primary-foreground shadow-xs hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40",
+        special:
+          "bg-linear-(--gradient) text-white hover:bg-linear-(--gradient-hover) disabled:bg-linear-(--gradient-disabled) inset-shadow-[0px_4px_12px_0px_rgba(255,252,223,0.5)] disabled:inset-shadow-[0px_-3px_3px_0px_rgba(145,138,150,0.33)]",
+        primary:
+          "bg-primary text-white disabled:bg-[#242424] disabled:text-[#666666] hover:bg-[#451093]",
+        "outline-primary":
+          "border border-primary text-primary hover:border-[#451093] hover:text-[#451093] disabled:border-[#242424] disabled:text-[#666666]",
         outline:
-          "border border-input bg-background shadow-xs hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
+          "border border-[#666666] text-white hover:border-[#666666] hover:text-[#C2C2C2] disabled:border-[#242424] disabled:text-[#666666]",
+        link: "text-primary hover:text-[#451093] disabled:text-[#666666]",
+        ghost: "text-white hover:text-[#C2C2C2] disabled:text-[#666666]",
       },
       size: {
-        default: "h-9 px-4 py-2 has-[>svg]:px-3",
-        sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
-        lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
-        icon: "size-9",
+        sm: "rounded-md h-9 px-6 text-sm has-[>svg]:px-2.5",
+        md: "rounded-md h-10 px-6 text-sm has-[>svg]:px-3",
+        lg: "rounded-md h-11 px-6 text-base has-[>svg]:px-3.5",
+        xl: "rounded-md h-12 px-6 text-base has-[>svg]:px-4",
       },
     },
     defaultVariants: {
-      variant: "default",
-      size: "default",
+      variant: "primary",
+      size: "md",
     },
   },
 );

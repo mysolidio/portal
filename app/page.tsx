@@ -1,11 +1,13 @@
 import Header from "@/components/header";
-import HeroSection from "@/components/hero";
+import Hero from "@/components/hero";
+import Solution from "@/components/sections/solution";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <HeroSection />
+      <Hero />
+      <Solution />
     </>
   );
 }

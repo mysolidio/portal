@@ -56,7 +56,7 @@ const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
       variant="special"
       {...props}
       className={cn(
-        "rounded-full bg-white bg-linear-0 text-black uppercase hover:text-white",
+        "h-15 rounded-full bg-white bg-linear-0 text-black uppercase hover:text-white",
         className,
       )}
     >

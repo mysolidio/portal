@@ -141,7 +141,7 @@ const HeaderMenu: FC = () => {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="size-10 place-content-center place-items-center rounded-full bg-[#002458] text-white"
+                    className="grid size-10 place-content-center rounded-full bg-[#002458] text-white"
                   >
                     <Icon className="size-4" />
                   </a>

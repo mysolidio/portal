@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default async function HeroSection() {
   return (
-    <div className="relative grid h-screen w-screen place-content-center overflow-hidden bg-[#001024]">
+    <div className="relative grid h-screen w-full place-content-center overflow-hidden bg-[#001024]">
       {/* Video background */}
       <div className="absolute inset-0 grid place-content-center">
         <div className="size-[400px] rounded-full bg-linear-[90deg,#FF9500_0%,#FF0088_100%] opacity-50" />

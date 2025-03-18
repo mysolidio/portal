@@ -31,7 +31,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed z-50 h-20 w-screen transition-all duration-500 ease-in-out has-[[data-slot=navigation-menu-content]]:bg-[#001024]",
+        "fixed z-50 h-20 w-full backdrop-blur-md transition-all duration-500 ease-in-out has-[[data-slot=navigation-menu-content]]:bg-[#001024] has-[[data-slot=navigation-menu-content]]:backdrop-blur-none",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >

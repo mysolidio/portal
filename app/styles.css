@@ -141,6 +141,9 @@
   body {
     @apply bg-background text-foreground;
   }
+  body[data-scroll-locked] header {
+    @apply right-(--removed-body-scroll-bar-size);
+  }
 }
 
 @utility container {

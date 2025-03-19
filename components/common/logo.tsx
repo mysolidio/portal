@@ -16,6 +16,9 @@ export default function Logo({ size = 24, className = "" }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
     >
+      <clipPath id="a">
+        <path d="m.64502 0h160v206h-160z" />
+      </clipPath>
       <g
         clipPath="url(#a)"
         transform={`translate(${(viewBoxSize - 161) / 2}, 0)`}

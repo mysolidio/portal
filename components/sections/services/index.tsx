@@ -36,7 +36,7 @@ export default function ServicesSection() {
           <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase">
             Services
           </div>
-          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[50px]">
+          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[48px]">
             Your gateway to web3
           </div>
         </div>

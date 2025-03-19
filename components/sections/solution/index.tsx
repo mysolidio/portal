@@ -10,7 +10,7 @@ export default function SolutionSection() {
           <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase">
             Solution
           </div>
-          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[50px]">
+          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[48px]">
             Unleash the potential
           </div>
           <div className="mt-4 text-[14px] leading-[1.5] lg:mt-6">

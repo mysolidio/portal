@@ -14,7 +14,7 @@ export default async function PartnersSection() {
                 src={`/partner-0${idx}.webp`}
                 alt="Partner"
                 fill
-                objectFit="contain"
+                className="object-contain"
               />
             </div>
           ))}

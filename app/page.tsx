@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/sections/hero";
 import Partners from "@/components/sections/partners";
@@ -17,6 +18,7 @@ export default function Home() {
       {/* Use cases */}
       <Questions />
       <Solarid />
+      <Footer />
     </>
   );
 }

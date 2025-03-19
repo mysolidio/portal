@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FC, Fragment, memo, useState } from "react";
 
 import LogoWithText from "@/common/logoWithText";
-import { DiscordIcon, TelegramIcon, XIcon } from "@/icons";
+import Socials from "@/common/socials";
 import { cn } from "@/lib/utils";
 import { Button } from "@/ui/button";
 import { Drawer, DrawerContent, DrawerTitle, DrawerTrigger } from "@/ui/drawer";
@@ -32,20 +32,6 @@ const items = [
   {
     label: "Learn",
     href: "#learn",
-  },
-];
-const socialItems = [
-  {
-    Icon: XIcon,
-    href: "https://x.com/solarid",
-  },
-  {
-    Icon: TelegramIcon,
-    href: "https://t.me/solarid",
-  },
-  {
-    Icon: DiscordIcon,
-    href: "https://discord.gg/solarid",
   },
 ];
 
@@ -134,19 +120,7 @@ const HeaderMenu: FC = () => {
             </div>
             <div className="shrink-0 space-y-6">
               <BookDemoButton className="w-full" />
-              <div className="flex items-center justify-center gap-4">
-                {socialItems.map(({ Icon, href }, idx) => (
-                  <a
-                    key={idx}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="grid size-10 place-content-center rounded-full bg-[#002458] text-white"
-                  >
-                    <Icon className="size-4" />
-                  </a>
-                ))}
-              </div>
+              <Socials />
             </div>
           </div>
         </DrawerContent>

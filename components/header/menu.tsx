@@ -83,14 +83,19 @@ const HeaderMenu: FC = () => {
               </NavigationMenuContent>
             </NavigationMenuItem>
           ))}
-          <BookDemoButton />
+          <li>
+            <BookDemoButton />
+          </li>
         </NavigationMenuList>
         <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-transparent/50 backdrop-blur-lg" />
       </NavigationMenu>
 
       {/* Mobile menu */}
       <Drawer direction="left" open={isOpen} onOpenChange={setIsOpen}>
-        <DrawerTrigger className="cursor-pointer lg:hidden">
+        <DrawerTrigger
+          className="cursor-pointer lg:hidden"
+          aria-label="Open menu"
+        >
           <MenuIcon size={24} className="text-white" />
         </DrawerTrigger>
         <DrawerContent className="!w-screen !border-r-0 bg-[#001836] shadow-none outline-none">
@@ -100,6 +105,7 @@ const HeaderMenu: FC = () => {
             <button
               className="cursor-pointer text-white"
               onClick={() => setIsOpen(false)}
+              aria-label="Close menu"
             >
               <X size={24} />
             </button>

@@ -22,11 +22,11 @@ export default function QuestionsSection() {
               key={idx}
               className="group rounded-[16px] border border-[#082659] p-4 lg:rounded-[24px] lg:p-6"
             >
-              <summary className="flex cursor-pointer items-center justify-between gap-6">
+              <summary className="flex cursor-pointer items-center justify-between gap-6 [&::-webkit-details-marker]:hidden [&::marker]:hidden">
                 <div className="text-[16px] leading-[1.3] group-open:font-bold lg:font-bold">
                   {question}
                 </div>
-                <ChevronDownIcon className="size-4 transition-transform duration-300 group-open:rotate-180" />
+                <ChevronDownIcon className="size-4 shrink-0 transition-transform duration-300 group-open:rotate-180" />
               </summary>
               <div className="mt-4 rounded-[8px] bg-[linear-gradient(0deg,#002A72_0%,_rgba(0,80,216,0)_100%)] p-4 text-[14px] leading-[1.5] lg:rounded-[16px] lg:p-6">
                 {answer}

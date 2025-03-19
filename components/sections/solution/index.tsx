@@ -7,10 +7,10 @@ export default function SolutionSection() {
     <div className="bg-[#001024] pt-20 lg:pt-30">
       <div className="container flex flex-col items-center justify-between gap-15 lg:flex-row">
         <div className="max-w-md text-white lg:max-w-[554px] [&>*]:text-center lg:[&>*]:text-left">
-          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase">
+          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase lg:text-[18px]">
             Solution
           </div>
-          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[48px]">
+          <div className="mt-2 text-[32px] leading-[1.2] lg:mt-4 lg:text-[48px]">
             Unleash the potential
           </div>
           <div className="mt-4 text-[14px] leading-[1.5] lg:mt-6">

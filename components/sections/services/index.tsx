@@ -33,10 +33,10 @@ export default function ServicesSection() {
     <div className="bg-[#001024] py-20 text-white lg:py-30">
       <div className="container space-y-15">
         <div className="[&>*]:text-center lg:[&>*]:text-left">
-          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase">
+          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase lg:text-[18px]">
             Services
           </div>
-          <div className="mt-2 text-[32px] leading-[1.2] lg:text-[48px]">
+          <div className="mt-2 text-[32px] leading-[1.2] lg:mt-4 lg:text-[48px]">
             Your gateway to web3
           </div>
         </div>

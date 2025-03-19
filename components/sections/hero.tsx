@@ -19,7 +19,7 @@ export default async function HeroSection() {
           <br className="block md:hidden" />
           and Data Self-Sovereignty in Web3
         </div>
-        <div className="mt-10 inline-flex w-[min(100%,279px)] flex-col items-center justify-center gap-2 md:w-full md:flex-row [&_button]:w-full md:[&_button]:w-auto">
+        <div className="mt-10 inline-flex w-[min(100%,279px)] flex-col items-center justify-center gap-2 md:w-full md:flex-row md:gap-4 [&_button]:w-full md:[&_button]:w-auto">
           <Button
             size="xl"
             variant="special"
@@ -31,7 +31,7 @@ export default async function HeroSection() {
           <Button
             size="xl"
             variant="outline"
-            className="h-15 gap-2.5 rounded-full bg-white/10 !px-8 uppercase"
+            className="h-15 gap-2.5 rounded-full !border-white bg-white/10 !px-8 uppercase"
           >
             Request a demo
           </Button>

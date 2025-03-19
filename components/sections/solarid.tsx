@@ -6,9 +6,9 @@ export default async function SolaridSection() {
   return (
     <div className="relative overflow-hidden bg-[#001024] py-40">
       <div className="absolute inset-0 grid place-content-center">
-        <div className="size-[400px] rounded-full bg-linear-[90deg,#FF9500_0%,#FF0088_100%] opacity-50 lg:translate-x-[clamp(0px,calc((50vw-50%)*2/3),100%)]" />
+        <div className="size-[400px] rounded-full bg-linear-[90deg,#FF9500_0%,#FF0088_100%] opacity-40 lg:translate-x-[clamp(0px,calc((50vw-50%)*2/3),100%)]" />
       </div>
-      <div className="absolute inset-0 backdrop-blur-lg" />
+      <div className="absolute inset-0 bg-[url('/sec-solarid-bg.png')] bg-contain bg-center bg-repeat mix-blend-screen backdrop-blur-lg" />
       <div className="relative z-10 container text-center text-white">
         <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase lg:text-[18px]">
           Solarid

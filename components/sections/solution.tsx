@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import solutionImage from "./solution.webp";
+import solutionImage from "@/public/sec-solution.webp";
 
 export default function SolutionSection() {
   return (

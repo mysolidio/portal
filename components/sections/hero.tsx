@@ -7,7 +7,7 @@ export default async function HeroSection() {
     <div className="relative grid h-screen w-full place-content-center overflow-hidden bg-[#001024]">
       {/* Video background */}
       <div className="absolute inset-0 grid place-content-center">
-        <div className="size-[400px] rounded-full bg-linear-[90deg,#FF9500_0%,#FF0088_100%] opacity-50" />
+        <div className="size-[400px] rounded-full bg-linear-[90deg,#FF9500_0%,#FF0088_100%] opacity-70" />
       </div>
       <div className="absolute inset-0 backdrop-blur-lg" />
       <div className="relative z-10 flex flex-col items-center justify-center px-4 text-center text-white">

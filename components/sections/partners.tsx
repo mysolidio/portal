@@ -11,7 +11,7 @@ export default async function PartnersSection() {
               className="relative m-10 size-32 shrink-0 snap-start scroll-mx-10"
             >
               <Image
-                src={`/partner-0${idx}.webp`}
+                src={`/sec-partner-0${idx}.webp`}
                 alt="Partner"
                 fill
                 className="object-contain"

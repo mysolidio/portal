@@ -10,15 +10,16 @@ const buttonVariants = cva(
     variants: {
       variant: {
         special:
-          "bg-linear-(--gradient) text-white hover:bg-linear-(--gradient-hover) disabled:bg-linear-(--gradient-disabled) inset-shadow-[0px_4px_12px_0px_rgba(255,252,223,0.5)] disabled:inset-shadow-[0px_-3px_3px_0px_rgba(145,138,150,0.33)]",
+          "bg-purple-600 text-white disabled:bg-linear-(--gradient-disabled) hover:bg-purple-500 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all",
         primary:
           "bg-primary text-white disabled:bg-[#242424] disabled:text-[#666666] hover:bg-[#451093]",
         "outline-primary":
           "border border-primary text-primary hover:border-[#451093] hover:text-[#451093] disabled:border-[#242424] disabled:text-[#666666]",
         outline:
-          "border border-[#666666] text-white hover:border-[#666666] hover:text-[#C2C2C2] disabled:border-[#242424] disabled:text-[#666666]",
+          "border border-[#666666] text-white hover:border-white hover:bg-white hover:text-[#001024] disabled:border-[#242424] disabled:text-[#666666]",
         link: "text-primary hover:text-[#451093] disabled:text-[#666666]",
-        ghost: "text-white hover:text-[#C2C2C2] disabled:text-[#666666]",
+        ghost:
+          "text-white bg-white/30 backdrop-blur-sm hover:bg-white/50 hover:text-white hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] disabled:text-[#666666]",
       },
       size: {
         sm: "rounded-md h-9 px-6 text-sm has-[>svg]:px-2.5",

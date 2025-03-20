@@ -20,29 +20,93 @@ const items = [
   {
     label: "Solutions",
     href: "#solutions",
+    subItems: [
+      {
+        label: "KYC Lifecycle Management",
+        href: "#kyc-lifecycle-management",
+      },
+      {
+        label: "Onchain KYC SDK",
+        href: "#onchain-kyc-sdk",
+      },
+      {
+        label: "Fraud Detection",
+        href: "#fraud-detection",
+      },
+      {
+        label: "Periodic AML Compliance Checker",
+        href: "#periodic-aml-compliance-checker",
+      },
+    ],
   },
   {
     label: "Use Cases",
     href: "#use-cases",
+    subItems: [
+      {
+        label: "Onramp & Offramp",
+        href: "#onramp-offramp",
+      },
+      {
+        label: "Payments",
+        href: "#payments",
+      },
+      {
+        label: "Regulatory Compliance for Exchanges",
+        href: "#regulatory-compliance-for-exchanges",
+      },
+      {
+        label: "Onchain ID for Real-world Applications",
+        href: "#onchain-id-for-real-world-applications",
+      },
+    ],
   },
   {
     label: "Develop",
     href: "#develop",
+    subItems: [
+      {
+        label: "Documentation",
+        href: "#documentation",
+      },
+      {
+        label: "API Reference",
+        href: "#api-reference",
+      },
+    ],
   },
   {
     label: "Learn",
     href: "#learn",
+    subItems: [
+      {
+        label: "Blog",
+        href: "#blog",
+      },
+      {
+        label: "Whitepaper",
+        href: "#whitepaper",
+      },
+      {
+        label: "What is Onchain KYC?",
+        href: "#what-is-onchain-kyc",
+      },
+      {
+        label: "What is Verifiable Credential?",
+        href: "#what-is-verifiable-credential",
+      },
+    ],
   },
 ];
 
 const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
   return (
     <Button
-      size="xl"
-      variant="special"
+      size="lg"
+      variant="ghost"
       {...props}
       className={cn(
-        "h-15 rounded-full bg-white bg-linear-0 text-black uppercase hover:text-white",
+        "gap-2.5 rounded-full !px-6 text-white uppercase transition-all duration-300 ease-in-out",
         className,
       )}
     >
@@ -59,26 +123,27 @@ const HeaderMenu: FC = () => {
       {/* Desktop menu */}
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className="gap-12">
-          {items.map(({ label, href }, idx) => (
+          {items.map(({ label, subItems }, idx) => (
             <NavigationMenuItem key={idx} value={label}>
-              <NavigationMenuTrigger className="font-inter h-14 border-b border-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white">
+              <NavigationMenuTrigger className="font-inter h-14 border-b border-transparent bg-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white hover:bg-transparent">
                 {label}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="right-0 container flex justify-end text-white">
                 <div className="grid w-[710px] grid-cols-2 gap-x-10 gap-y-2 pt-2 pb-4">
-                  {new Array(5).fill(0).map((_, idx) => (
-                    <Link
-                      key={idx}
-                      href={href}
-                      className="group flex items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
-                    >
-                      Link 0{idx + 1}
-                      <ArrowRight
-                        size={20}
-                        className="hidden transition-all group-hover:inline-block"
-                      />
-                    </Link>
-                  ))}
+                  {subItems &&
+                    subItems.map(({ label, href }, idx) => (
+                      <Link
+                        key={idx}
+                        href={href}
+                        className="group flex items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
+                      >
+                        {label}
+                        <ArrowRight
+                          size={20}
+                          className="hidden transition-all group-hover:inline-block"
+                        />
+                      </Link>
+                    ))}
                 </div>
               </NavigationMenuContent>
             </NavigationMenuItem>
@@ -87,7 +152,7 @@ const HeaderMenu: FC = () => {
             <BookDemoButton />
           </li>
         </NavigationMenuList>
-        <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-transparent/50 backdrop-blur-lg" />
+        <NavigationMenuViewport className="z-30 mt-0 !w-screen rounded-none border-0 bg-transparent backdrop-blur-md" />
       </NavigationMenu>
 
       {/* Mobile menu */}
@@ -98,7 +163,7 @@ const HeaderMenu: FC = () => {
         >
           <MenuIcon size={24} className="text-white" />
         </DrawerTrigger>
-        <DrawerContent className="!w-screen !border-r-0 bg-[#001836] shadow-none outline-none">
+        <DrawerContent className="!w-screen !border-r-0 bg-black/60 shadow-none backdrop-blur-md outline-none">
           <DrawerTitle />
           <nav className="flex h-20 items-center justify-between p-6">
             <LogoWithText size={32} className="text-white" />

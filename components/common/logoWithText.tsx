@@ -23,7 +23,7 @@ export default function LogoWithText({ size, className }: Props) {
         className="!font-spline-sans text-inherit select-none"
         style={{ fontSize: size, lineHeight: `${size}px` }}
       >
-        Solarid
+        Solid
       </div>
     </Link>
   );

@@ -1,27 +1,26 @@
 import Image from "next/image";
 
-import solutionImage from "@/public/sec-solution.webp";
+import solutionImage from "@/public/sec-solution.png";
 
 export default function SolutionSection() {
   return (
-    <div className="bg-[#001024] pt-20 lg:pt-30">
-      <div className="container flex flex-col items-center justify-between gap-15 lg:flex-row">
+    <div className="bg-[#0F172A] pt-20 lg:pt-30">
+      <div className="container flex flex-col items-center justify-between gap-15 lg:flex-row lg:items-end">
         <div className="max-w-md text-white lg:max-w-[554px] [&>*]:text-center lg:[&>*]:text-left">
-          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] text-[#21FBFF] uppercase lg:text-[18px]">
+          <div className="text-[12px] leading-[1.3] font-bold tracking-[8px] uppercase lg:text-[18px]">
             Solution
           </div>
           <div className="mt-2 text-[32px] leading-[1.2] lg:mt-4 lg:text-[48px]">
-            Unleash the potential
+            A Universal, Interoperable ID
           </div>
           <div className="mt-4 text-[14px] leading-[1.5] lg:mt-6">
-            Primus uses secure zkTLS (zero-knowledge transport layer security)
-            and zkFHE (zero-knowledge fully homomorphic encryption) to validate
-            arbitrary web data and utilize it in an encrypted form. Cryptography
-            ensures the reliability of data and service providers.
+            Solid uses secure zk-snark to validate arbitrary KYC data and
+            utilize it in an encrypted form. Cryptography ensures the
+            reliability of data and service providers.
           </div>
         </div>
 
-        <div className="text-white">
+        <div className="mt-10 flex items-end justify-center text-white lg:mt-0">
           <Image
             src={solutionImage}
             alt="Solution"

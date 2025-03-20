@@ -7,6 +7,12 @@
 :root {
   --font-spline-sans: "Spline Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
+
+  --gradient: 90deg, #45b2ff 0%, #1453f1 100%;
+  --gradient-hover: 90deg, #14f195 0%, #9945ff 100%;
+  --gradient-disabled: 256.2deg, #3b3a3a -4.55%, #7f7c80 104.55%;
+
+  /* Shadcn UI */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -121,18 +127,25 @@
   --font-inter: var(--font-inter);
 
   /* Spacing */
-  --spacing-15: calc(15 * var(--spacing));
+  --spacing-15: --spacing(15);
+  --spacing-30: --spacing(30);
 }
 
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    font-feature-settings:
+      "liga" off,
+      "clig" off;
   }
   body {
     @apply bg-background text-foreground;
   }
+  body[data-scroll-locked] header {
+    @apply right-(--removed-body-scroll-bar-size);
+  }
 }
 
-.container {
-  @apply mx-auto;
+@utility container {
+  @apply mx-auto px-4 lg:px-8;
 }

@@ -1,27 +1,54 @@
-# Portal page for Solid
+# Turborepo non-monorepo starter
 
-## How to install
+This Turborepo starter is maintained by the Turborepo core team.
 
-1. Clone this repositoy:
+## Using this example
 
-```bash
-git clone https://github.com/solidlabsinc/portal.git
+Run the following command:
+
+```sh
+npx create-turbo@latest -e non-monorepo
 ```
 
-2. Go into project
+## What's inside?
 
-```bash
-cd portal
+This Turborepo uses a single, non-monorepo project (in this case, a single Next.js application).
+
+### Tasks
+
+There are several Turborepo tasks already set up for you to use.
+
+#### Build the application
+
+```
+pnpm turbo build
 ```
 
-3. Install dependencies
+#### Lint source code
 
-```bash
-yarn install
+```
+pnpm turbo lint
 ```
 
-4. Run project
+#### Type check source code
 
-```bash
-yarn dev
 ```
+pnpm turbo check-types
+```
+
+#### Run the application's development server
+
+```
+pnpm turbo dev
+```
+
+## Useful Links
+
+Learn more about the power of Turborepo:
+
+- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
+- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
+- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
+- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
+- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
+- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)

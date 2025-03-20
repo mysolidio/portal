@@ -1,14 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/layout/navbar";
-import { ThemeProvider } from "@/components/layout/theme-provider";
-const inter = Inter({ subsets: ["latin"] });
+import { Inter, Spline_Sans } from "next/font/google";
+
+import "./styles.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+const splineSans = Spline_Sans({
+  variable: "--font-spline-sans",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: "Solarid",
+  description: "Digital Identity & Data Sovereignty",
 };
 
 export default function RootLayout({
@@ -17,18 +24,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background", inter.className)}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${inter.variable} ${splineSans.variable}`}>
+        {children}
       </body>
     </html>
   );

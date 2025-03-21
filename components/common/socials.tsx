@@ -4,15 +4,15 @@ import { cn } from "@/lib/utils";
 const items = [
   {
     Icon: XIcon,
-    href: "https://x.com/solarid",
+    href: "https://x.com/mysolid",
   },
   {
     Icon: DiscordIcon,
-    href: "https://discord.gg/solarid",
+    href: "https://discord.gg/mysolid",
   },
   {
     Icon: TelegramIcon,
-    href: "https://t.me/solarid",
+    href: "https://t.me/mysolid",
   },
 ];
 

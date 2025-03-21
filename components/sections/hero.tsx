@@ -21,12 +21,13 @@ export default async function HeroSection() {
       <div className="absolute inset-0 backdrop-blur-lg" />
       <div className="relative z-10 flex flex-col items-center justify-center px-4 text-center text-white">
         <div className="text-[2rem] leading-[1.2] lg:text-4xl">
-          Compliance-first onchain KYC <br className="block md:hidden" />&
-          Identity Platform
+          Universal Identity <br className="block md:hidden" /> Verify once, use
+          anywhere
         </div>
         <div className="mt-4 text-[16px] leading-[1.3] lg:text-[20px]">
-          Seamless onchain KYC with <br className="block md:hidden" />
-          borderless digital identity solutions
+          Solid provides a global standard for digital identity and{" "}
+          <br className="block md:hidden" />
+          data self sovereignty
         </div>
         <div className="mt-10 inline-flex w-[min(100%,279px)] flex-col items-center justify-center gap-2 md:w-full md:flex-row md:gap-4 [&_button]:w-full md:[&_button]:w-auto">
           <Button

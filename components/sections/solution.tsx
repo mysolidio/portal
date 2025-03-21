@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import solutionImage from "@/public/sec-solution.png";
+import solutionImage from "@/public/sec-solution-2.png";
 
 export default function SolutionSection() {
   return (
@@ -11,7 +11,7 @@ export default function SolutionSection() {
             Solution
           </div>
           <div className="mt-2 text-[32px] leading-[1.2] lg:mt-4 lg:text-[48px]">
-            A Universal, Interoperable ID
+            Universal, Interoperable Identity
           </div>
           <div className="mt-4 text-[14px] leading-[1.5] lg:mt-6">
             Solid uses secure zk-snark to validate arbitrary KYC data and

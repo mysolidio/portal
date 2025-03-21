@@ -16,7 +16,20 @@ import {
   NavigationMenuViewport,
 } from "@/ui/navigation-menu";
 
-const items = [
+type SubItemType = {
+  label: string;
+  href: string;
+  description?: string;
+};
+
+type NavigationItemType = {
+  label: string;
+  href: string;
+  description?: string;
+  subItems: SubItemType[];
+};
+
+const items: NavigationItemType[] = [
   {
     label: "Solutions",
     href: "#solutions",
@@ -42,22 +55,32 @@ const items = [
   {
     label: "Use Cases",
     href: "#use-cases",
+    description:
+      "Explore how our identity solutions solve real-world challenges across multiple industries with secure, compliant verification processes.",
     subItems: [
       {
-        label: "Onramp & Offramp",
-        href: "#onramp-offramp",
+        label: "KYC",
+        href: "#kyc",
+        description:
+          "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards.",
       },
       {
-        label: "Payments",
-        href: "#payments",
+        label: "Defi",
+        href: "#defi",
+        description:
+          "Enable secure, compliant DeFi applications with verified identity. Facilitate lending, borrowing, and trading with minimal friction while maintaining regulatory compliance.",
       },
       {
-        label: "Regulatory Compliance for Exchanges",
-        href: "#regulatory-compliance-for-exchanges",
+        label: "National DID",
+        href: "#digital-national-id",
+        description:
+          "Support sovereign digital identity solutions for governments and organizations. Create secure, privacy-preserving national ID systems with blockchain verification.",
       },
       {
-        label: "Onchain ID for Real-world Applications",
-        href: "#onchain-id-for-real-world-applications",
+        label: "Anti-Sybil",
+        href: "#anti-sybil",
+        description:
+          "Protect your platform from Sybil attacks with our unique identity verification. Ensure one-person-one-account while preserving user privacy and preventing bot activity.",
       },
     ],
   },
@@ -117,34 +140,95 @@ const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
 
 const HeaderMenu: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeUseCase, setActiveUseCase] = useState<string | null>("KYC");
 
   return (
     <>
       {/* Desktop menu */}
       <NavigationMenu className="hidden lg:flex">
         <NavigationMenuList className="gap-12">
-          {items.map(({ label, subItems }, idx) => (
+          {items.map(({ label, subItems, description }, idx) => (
             <NavigationMenuItem key={idx} value={label}>
-              <NavigationMenuTrigger className="font-inter h-14 border-b border-transparent bg-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white hover:bg-transparent">
+              <NavigationMenuTrigger
+                className="font-inter h-14 border-b border-transparent bg-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white hover:bg-transparent"
+                onMouseEnter={() => {
+                  if (label === "Use Cases") {
+                    setActiveUseCase("KYC");
+                  }
+                }}
+              >
                 {label}
               </NavigationMenuTrigger>
               <NavigationMenuContent className="right-0 container flex justify-end text-white">
-                <div className="grid w-[710px] grid-cols-2 gap-x-10 gap-y-2 pt-2 pb-4">
-                  {subItems &&
-                    subItems.map(({ label, href }, idx) => (
-                      <Link
-                        key={idx}
-                        href={href}
-                        className="group flex items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
-                      >
-                        {label}
-                        <ArrowRight
-                          size={20}
-                          className="hidden transition-all group-hover:inline-block"
-                        />
-                      </Link>
-                    ))}
-                </div>
+                {label === "Use Cases" ? (
+                  <div className="flex gap-10">
+                    <div className="w-[300px] border-r border-white/10 p-4">
+                      {activeUseCase && (
+                        <>
+                          <h4 className="text-md mb-1 font-medium">
+                            {
+                              subItems.find(
+                                (item) => item.label === activeUseCase,
+                              )?.label
+                            }
+                          </h4>
+                          <p className="text-sm text-white/80">
+                            {subItems.find(
+                              (item) => item.label === activeUseCase,
+                            )?.description || description}
+                          </p>
+                        </>
+                      )}
+                    </div>
+                    <div className="grid flex-1 grid-cols-2 gap-x-10 gap-y-2 pt-2 pb-4">
+                      {subItems &&
+                        subItems.map(
+                          (
+                            {
+                              label: subLabel,
+                              href,
+                              description: subDescription,
+                            },
+                            subIdx,
+                          ) => (
+                            <Link
+                              key={subIdx}
+                              href={href}
+                              className="group flex min-w-[150px] items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
+                              onMouseEnter={() =>
+                                subDescription
+                                  ? setActiveUseCase(subLabel)
+                                  : null
+                              }
+                            >
+                              {subLabel}
+                              <ArrowRight
+                                size={20}
+                                className="hidden transition-all group-hover:inline-block"
+                              />
+                            </Link>
+                          ),
+                        )}
+                    </div>
+                  </div>
+                ) : (
+                  <div className="grid grid-cols-2 gap-x-10 gap-y-2 pt-2 pb-4">
+                    {subItems &&
+                      subItems.map(({ label: subLabel, href }, subIdx) => (
+                        <Link
+                          key={subIdx}
+                          href={href}
+                          className="group flex items-center justify-between border-b border-white/20 px-2 py-4 hover:border-white/50"
+                        >
+                          {subLabel}
+                          <ArrowRight
+                            size={20}
+                            className="hidden transition-all group-hover:inline-block"
+                          />
+                        </Link>
+                      ))}
+                  </div>
+                )}
               </NavigationMenuContent>
             </NavigationMenuItem>
           ))}

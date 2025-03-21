@@ -20,37 +20,42 @@ const itemGroups = [
         external: false,
       },
       {
-        label: "Data Verification",
-        href: "#data-verification",
-        external: false,
+        label: "Verifiable Credentials",
+        href: "https://www.w3.org/TR/vc-data-model-2.0/",
+        external: true,
+      },
+      {
+        label: "Solana Foundation",
+        href: "http://solana.com",
+        external: true,
       },
     ],
   },
-  {
-    title: "Other",
-    items: [
-      {
-        label: "Terms & Conditions",
-        href: "#terms-and-conditions",
-        external: false,
-      },
-      {
-        label: "Privacy",
-        href: "#privacy",
-        external: false,
-      },
-      {
-        label: "Trademark Policy",
-        href: "#trademark-policy",
-        external: false,
-      },
-      {
-        label: "Responsible disclosure policy",
-        href: "#responsible-disclosure-policy",
-        external: false,
-      },
-    ],
-  },
+  // {
+  //   title: "Other",
+  //   items: [
+  //     {
+  //       label: "Terms & Conditions",
+  //       href: "#terms-and-conditions",
+  //       external: false,
+  //     },
+  //     {
+  //       label: "Privacy",
+  //       href: "#privacy",
+  //       external: false,
+  //     },
+  //     {
+  //       label: "Trademark Policy",
+  //       href: "#trademark-policy",
+  //       external: false,
+  //     },
+  //     {
+  //       label: "Responsible disclosure policy",
+  //       href: "#responsible-disclosure-policy",
+  //       external: false,
+  //     },
+  //   ],
+  // },
   {
     title: "Resources",
     items: [
@@ -61,17 +66,17 @@ const itemGroups = [
       },
       {
         label: "Docs",
-        href: "https://docs.solarid.io",
+        href: "https://docs.mysolid.io",
         external: true,
       },
-      {
-        label: "Dev Hub",
-        href: "https://www.devhub.com",
-        external: true,
-      },
+      // {
+      //   label: "Dev Hub",
+      //   href: "https://www.devhub.com",
+      //   external: true,
+      // },
       {
         label: "Research",
-        href: "https://research.solarid.io",
+        href: "https://research.mysolid.io",
         external: true,
       },
     ],
@@ -117,7 +122,7 @@ export default function Footer() {
           ))}
         </ul>
         <div className="place-self-center text-center text-[14px] leading-[1.5] text-white/40 md:absolute md:bottom-0 md:left-4 md:place-self-start lg:left-8">
-          @2025 Solarid. All rights reserved.
+          @2025 Solid Labs Inc. All rights reserved.
         </div>
       </div>
     </footer>

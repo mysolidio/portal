@@ -1,4 +1,6 @@
-const usecases = [
+import { cn } from "@/lib/utils";
+
+const useCases = [
   {
     id: "01",
     title: "Verified Trust",
@@ -25,22 +27,22 @@ const usecases = [
   },
 ];
 
-export default function UsecasesSection() {
+export default function UseCasesSection() {
   return (
     <div className="bg-[#001024] py-20 lg:py-30">
       <div className="container">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
+        <div className="flex flex-col justify-between gap-16 lg:flex-row">
           {/* Left Column - Header and Description */}
-          <div className="flex flex-col">
+          <div className="mx-auto max-w-md text-center lg:mx-0 lg:text-left">
             <div className="text-[12px] leading-[1.3] font-bold tracking-[6px] text-white uppercase lg:text-[16px]">
-              USECASES
+              Use Cases
             </div>
             <h2 className="mt-4 text-[32px] leading-[1.2] font-semibold text-white lg:text-[42px]">
               How customers
               <br />
               use our services
             </h2>
-            <p className="mt-6 max-w-md text-[14px] leading-[1.6] text-white/80 lg:text-[16px]">
+            <p className="mt-6 text-[14px] leading-[1.6] text-white/80 lg:text-[16px]">
               Primus uses secure zkTLS (zero-knowledge transport layer security)
               and zkFHE (zero-knowledge fully homomorphic encryption) to
               validate arbitrary web data and utilize it in an encrypted form.
@@ -48,23 +50,35 @@ export default function UsecasesSection() {
           </div>
 
           {/* Right Column - Use Case Cards */}
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {usecases.map((usecase, index) => (
-              <div
-                key={index}
-                className="rounded-md border border-[#0a2452] bg-[#001838]/50 p-6 transition-colors duration-300 hover:border-[#1a3a6c]"
-              >
-                <div className="mb-3 text-[28px] font-bold text-[#3b82f6]/80">
-                  {usecase.id}
-                </div>
-                <h3 className="mb-3 text-[18px] font-semibold text-white">
-                  {usecase.title}
-                </h3>
-                <p className="text-[14px] leading-relaxed text-white/70">
-                  {usecase.description}
-                </p>
-              </div>
-            ))}
+          <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 lg:mx-0 lg:w-[min(720px,60%)]">
+            <ul className="lg:card-stack scroll-hidden -mb-[3*var(--padding-offset)] flex aspect-square w-full snap-x snap-mandatory scroll-px-4 gap-2 overflow-x-auto">
+              {useCases.map(({ id, title, description }, idx) => (
+                <li
+                  key={idx}
+                  className={cn(
+                    "lg:card-stack-item aspect-square w-[calc(100%-32px)] shrink-0 snap-start rounded-[24px] bg-cover bg-center shadow first:ml-4 last:mr-4 lg:!mx-0 lg:w-[calc(100%-3*var(--padding-offset))]",
+                  )}
+                  style={{
+                    ["--index" as string]: idx,
+                    backgroundImage: `url(/sec-use_case-${idx}.webp)`,
+                  }}
+                >
+                  <div className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] bg-[linear-gradient(180deg,rgba(29,221,227,0)_0%,#002BFF_100%)] p-10 text-white mix-blend-hard-light">
+                    <div className="text-[16px] leading-[1.3] font-bold">
+                      {id}
+                    </div>
+                    <div className="space-y-2.5">
+                      <div className="line-clamp-1 text-[32px] leading-[1.2]">
+                        {title}
+                      </div>
+                      <div className="line-clamp-2 text-[16px] leading-[1.3] opacity-80">
+                        {description}
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

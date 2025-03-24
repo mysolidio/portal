@@ -6,6 +6,7 @@ import Questions from "@/components/sections/questions";
 import Services from "@/components/sections/services";
 import Solarid from "@/components/sections/solarid";
 import Solution from "@/components/sections/solution";
+import UseCases from "@/components/sections/useCases";
 
 export default function Home() {
   return (
@@ -22,6 +23,9 @@ export default function Home() {
       </section>
       <section className="snap-start">
         <Services />
+      </section>
+      <section className="snap-start">
+        <UseCases />
       </section>
       <section className="snap-start">
         <Questions />

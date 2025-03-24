@@ -4,7 +4,7 @@ export default async function PartnersSection() {
   return (
     <div className="bg-[#000914] py-20">
       <div className="container pr-0 lg:pl-10">
-        <div className="flex w-full snap-x snap-mandatory gap-2.5 overflow-x-auto [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <div className="scroll-hidden flex w-full snap-x snap-mandatory gap-2.5 overflow-x-auto">
           {Array.from({ length: 6 }).map((_, idx) => (
             <div
               key={idx}

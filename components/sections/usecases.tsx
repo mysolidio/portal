@@ -3,27 +3,27 @@ import { cn } from "@/lib/utils";
 const useCases = [
   {
     id: "01",
-    title: "Verified Trust",
+    title: "KYC",
     description:
-      "Link credit/trust data to unlock DeFi borrowing/lending opportunities.",
+      "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards.",
   },
   {
     id: "02",
-    title: "Universal KYC",
+    title: "DeFi",
     description:
-      "Users KYC once and are compliant to interact with any dApp on Solana.",
+      "Enable secure, compliant DeFi applications with verified identity. Facilitate lending, borrowing, and trading with minimal friction while maintaining regulatory compliance.",
   },
   {
     id: "03",
-    title: "Proof of Humanity",
+    title: "National DID",
     description:
-      "Unique identity can be ensured by linking wallets, restricting Sybil and bot activity.",
+      "Support sovereign digital identity solutions for governments and organizations. Create secure, privacy-preserving national ID systems with blockchain verification.",
   },
   {
     id: "04",
-    title: "Verified Trust",
+    title: "Anti-Sybil",
     description:
-      "Link credit/trust data to unlock DeFi borrowing/lending opportunities.",
+      "Protect your platform from Sybil attacks with our unique identity verification. Ensure one-person-one-account while preserving user privacy and preventing bot activity.",
   },
 ];
 
@@ -43,13 +43,11 @@ export default function UseCasesSection() {
               use our services
             </h2>
             <p className="mt-6 text-[14px] leading-[1.6] text-white/80 lg:text-[16px]">
-              Primus uses secure zkTLS (zero-knowledge transport layer security)
-              and zkFHE (zero-knowledge fully homomorphic encryption) to
-              validate arbitrary web data and utilize it in an encrypted form.
+              Our platform provides infrastructure and SDKs for applications
+              that implement privacy-preserving digital identity, empowering
+              users to own their KYC data and share it only with their consent.
             </p>
           </div>
-
-          {/* Right Column - Use Case Cards */}
           <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 lg:mx-0 lg:w-[min(720px,60%)]">
             <ul className="lg:card-stack scroll-hidden -mb-[3*var(--padding-offset)] flex aspect-square w-full snap-x snap-mandatory scroll-px-4 gap-2 overflow-x-auto">
               {useCases.map(({ id, title, description }, idx) => (

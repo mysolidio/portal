@@ -14,8 +14,8 @@ const splineSans = Spline_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Solarid",
-  description: "Digital Identity & Data Sovereignty",
+  title: "Solid | Universal Identity",
+  description: "Verify once, use anywhere, we provides a global standard for digital identity and data self sovereignty",
 };
 
 export default function RootLayout({

@@ -122,9 +122,8 @@ const items: NavigationItemType[] = [
   },
 ];
 
-const jumpToWhitepaper = () => {
-  if (window)
-    window.open("https://docsend.com/v/mdysq/solid_whitepaper", "_blank");
+const bookADemo = () => {
+  if (window) window.open("https://forms.gle/ax3Ds57nmMHQY97d7", "_blank");
 };
 
 const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
@@ -137,7 +136,7 @@ const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
         "gap-2.5 rounded-full !px-6 text-white uppercase transition-all duration-300 ease-in-out",
         className,
       )}
-      onClick={jumpToWhitepaper}
+      onClick={bookADemo}
     >
       {children ?? "Book a demo"}
     </Button>

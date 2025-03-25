@@ -108,7 +108,7 @@ const items: NavigationItemType[] = [
       },
       {
         label: "Whitepaper",
-        href: "https://github.com/SecondSwap/secondswap-svm/pull/2",
+        href: "https://docsend.com/v/mdysq/solid_whitepaper",
       },
       {
         label: "What is Onchain KYC?",

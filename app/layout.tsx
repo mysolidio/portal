@@ -14,8 +14,9 @@ const splineSans = Spline_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Solid | Universal Identity",
-  description: "Verify once, use anywhere, we provides a global standard for digital identity and data self sovereignty",
+  title: "Solid | Universal Digital Identity",
+  description:
+    "Verify once, use anywhere, we provides a global standard for digital identity and data self sovereignty",
 };
 
 export default function RootLayout({

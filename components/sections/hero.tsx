@@ -20,9 +20,12 @@ export default async function HeroSection() {
       </div>
       <div className="absolute inset-0 backdrop-blur-lg" />
       <div className="relative z-10 flex flex-col items-center justify-center px-4 text-center text-white">
-        <div className="text-[2rem] leading-[1.2] lg:text-4xl">
-          Universal Identity <br className="block md:hidden" /> Verify once, use
-          anywhere
+        <div className="text-[2rem] leading-[1.2] text-purple-600 lg:text-4xl">
+          Universal Digital Identity
+          <br className="block" />
+        </div>
+        <div className="pt-3 text-[1.5rem] leading-[0.6] lg:text-2xl">
+          Verify once, use anywhere
         </div>
         <div className="mt-4 text-[16px] leading-[1.3] lg:text-[20px]">
           Solid provides a global standard for digital identity and{" "}

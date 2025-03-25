@@ -124,10 +124,7 @@ const items: NavigationItemType[] = [
 
 const jumpToWhitepaper = () => {
   if (window)
-    window.open(
-      "https://github.com/SecondSwap/secondswap-svm/pull/2",
-      "_blank",
-    );
+    window.open("https://docsend.com/v/mdysq/solid_whitepaper", "_blank");
 };
 
 const BookDemoButton: typeof Button = ({ className, children, ...props }) => {

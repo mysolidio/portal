@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Hero from "@/components/sections/hero";
-import Partners from "@/components/sections/partners";
 import Questions from "@/components/sections/questions";
 import Services from "@/components/sections/services";
 import Solarid from "@/components/sections/solarid";
@@ -18,7 +17,6 @@ export default function Home() {
       <section className="snap-start">
         <div className="relative">
           <Solution />
-          <Partners />
         </div>
       </section>
       <section className="snap-start">

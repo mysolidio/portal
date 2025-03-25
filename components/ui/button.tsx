@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         special:
-          "bg-purple-600 text-white disabled:bg-linear-(--gradient-disabled) hover:bg-purple-500 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all",
+          "bg-blue-600 text-white disabled:bg-linear-(--gradient-disabled) hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all",
         primary:
           "bg-primary text-white disabled:bg-[#242424] disabled:text-[#666666] hover:bg-[#451093]",
         "outline-primary":

@@ -28,14 +28,14 @@ export default function HeroSection() {
       </div>
       <div className="absolute inset-0 backdrop-blur-lg" />
       <div className="relative z-10 flex flex-col items-center justify-center px-4 text-center text-white">
-        <div className="text-bold text-[3rem] leading-[1.2] lg:text-4xl">
+        <div className="text-[3rem] leading-[1.2] font-bold lg:text-4xl">
           Universal Digital Identity
           <br className="block" />
         </div>
-        <div className="pt-3 text-[2rem] leading-[0.6] lg:text-2xl">
+        <div className="pt-3 text-[2.5rem] leading-[0.8] lg:text-3xl">
           Verify once, use anywhere
         </div>
-        <div className="mt-4 text-[16px] leading-[1.3] text-gray-200 lg:text-[20px]">
+        <div className="mt-4 text-[16px] leading-[1.3] lg:text-[20px]">
           A global standard for digital identity and{" "}
           <br className="block md:hidden" />
           data self sovereignty

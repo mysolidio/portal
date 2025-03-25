@@ -15,8 +15,8 @@ const itemGroups = [
         external: false,
       },
       {
-        label: "Use Cases",
-        href: "#use-cases",
+        label: "Whitepaper",
+        href: "https://github.com/SecondSwap/secondswap-svm/pull/2",
         external: false,
       },
       {
@@ -61,22 +61,17 @@ const itemGroups = [
     items: [
       {
         label: "Github",
-        href: "https://github.com/solidlabsinc",
+        href: "https://github.com/mysolidio",
         external: true,
       },
       {
         label: "Docs",
-        href: "https://docs.mysolid.io",
+        href: "#",
         external: true,
       },
-      // {
-      //   label: "Dev Hub",
-      //   href: "https://www.devhub.com",
-      //   external: true,
-      // },
       {
         label: "Research",
-        href: "https://research.mysolid.io",
+        href: "#",
         external: true,
       },
     ],

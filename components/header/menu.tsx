@@ -108,7 +108,7 @@ const items: NavigationItemType[] = [
       },
       {
         label: "Whitepaper",
-        href: "#whitepaper",
+        href: "https://github.com/SecondSwap/secondswap-svm/pull/2",
       },
       {
         label: "What is Onchain KYC?",
@@ -122,6 +122,14 @@ const items: NavigationItemType[] = [
   },
 ];
 
+const jumpToWhitepaper = () => {
+  if (window)
+    window.open(
+      "https://github.com/SecondSwap/secondswap-svm/pull/2",
+      "_blank",
+    );
+};
+
 const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
   return (
     <Button
@@ -132,12 +140,7 @@ const BookDemoButton: typeof Button = ({ className, children, ...props }) => {
         "gap-2.5 rounded-full !px-6 text-white uppercase transition-all duration-300 ease-in-out",
         className,
       )}
-      // eslint-disable-next-line @typescript-eslint/no-unused-expressions
-      onClick={() => {
-        window
-          ? window.open("https://forms.gle/ax3Ds57nmMHQY97d7", "_blank")
-          : null;
-      }}
+      onClick={jumpToWhitepaper}
     >
       {children ?? "Book a demo"}
     </Button>

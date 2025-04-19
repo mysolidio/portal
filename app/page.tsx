@@ -9,11 +9,9 @@ import UseCasesSection from "@/components/sections/usecases";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full snap-y snap-mandatory overflow-x-hidden scroll-smooth">
+    <div className="h-screen w-full overflow-x-hidden scroll-smooth">
       <Header />
-      <section className="min-h-screen snap-start">
-        <Hero />
-      </section>
+      <Hero />
       <section className="snap-start">
         <div className="relative">
           <Solution />

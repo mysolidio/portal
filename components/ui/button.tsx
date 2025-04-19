@@ -10,12 +10,12 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-black border border-[#989898] text-white rounded-full hover:bg-linear-(--gradient) drop-shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
+          "bg-black border border-[#6B6B6B] text-white rounded-full hover:bg-linear-(--gradient) drop-shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
+        primary:
+          "bg-linear-(--gradient) border border-[#6B6B6B] text-white rounded-full hover:bg-linear-(--gradient-2) drop-shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
         // TODO: Deprecated variants, remove them
         special:
           "bg-blue-600 text-white disabled:bg-linear-(--gradient-disabled) hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all",
-        primary:
-          "bg-primary text-white disabled:bg-[#242424] disabled:text-[#666666] hover:bg-[#451093]",
         "outline-primary":
           "border border-primary text-primary hover:border-[#451093] hover:text-[#451093] disabled:border-[#242424] disabled:text-[#666666]",
         outline:

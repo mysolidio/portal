@@ -9,6 +9,7 @@
   --font-space-grotesk: "Space Grotesk";
 
   --gradient: 0deg, #6b6b6b 0%, #000 72.18%, #fff 100%;
+  --gradient-2: 180deg, #fff 0%, #000 46.63%, #6b6b6b 100%;
 
   /* Shadcn UI */
   --background: oklch(1 0 0);
@@ -138,9 +139,6 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
-    font-feature-settings:
-      "liga" off,
-      "clig" off;
   }
   body {
     @apply bg-background text-foreground;

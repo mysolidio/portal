@@ -1,3 +1,4 @@
+export { default as ArrowUpRightIcon } from "./arrowUpRight";
 export { default as CheckerIcon } from "./checker";
 export { default as DataLockIcon } from "./dataLock";
 export { default as DataScientistIcon } from "./dataScientist";

@@ -45,32 +45,34 @@ export default function UseCasesSection() {
           </p>
         </div>
 
-        <div className="relative -mx-4 w-full shrink-0 lg:mx-0">
+        <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 lg:-mx-20 lg:w-[calc(100%+160px)]">
           <ul className="scroll-hidden -mb-[3*var(--padding-offset)] flex w-full snap-x snap-mandatory scroll-px-4 gap-6 overflow-x-auto">
             {useCases.map(({ id, title, description }, idx) => (
               <li
                 key={idx}
                 className={cn(
-                  "border-linear-gradient aspect-square w-[calc(100%-32px)] shrink-0 snap-start bg-cover bg-center shadow [--radius:24px] first:ml-4 last:mr-4 lg:!mx-0 lg:size-[482px]",
+                  "border-linear-gradient aspect-square w-[calc(100%-64px)] shrink-0 snap-center p-px shadow [--radius:24px] first:ml-4 last:mr-4 lg:size-[482px] lg:snap-start",
                 )}
-                style={
-                  {
+                // style={{
+                //   // TODO: Add background image
+                //   // backgroundImage: `url(/sec-use_case-${idx}.webp)`,
+                //   background: `radial-gradient(163.67% 163.67% at 50% 146.15%, #492B5C 11.59%, #BFA3D1 63.31%, #C1D2FF 93.59%), url(/sec-use_case-${idx}.webp) lightgray 50% / cover no-repeat`,
+                //   backgroundBlendMode: "hard-light, normal",
+                // }}
+              >
+                <div
+                  className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] p-10 text-white"
+                  style={{
                     // TODO: Add background image
                     // backgroundImage: `url(/sec-use_case-${idx}.webp)`,
-                  }
-                }
-              >
-                <div className="relative flex size-full flex-col justify-between gap-10 p-10 text-white">
-                  <div className="text-[16px] leading-[1.3] font-bold">
-                    {id}
-                  </div>
-                  <div className="space-y-2.5">
-                    <div className="line-clamp-1 text-[32px] leading-[1.2]">
-                      {title}
-                    </div>
-                    <div className="line-clamp-2 text-[16px] leading-[1.3] opacity-80">
-                      {description}
-                    </div>
+                    background: `radial-gradient(163.67% 163.67% at 50% 146.15%, #492B5C 11.59%, #BFA3D1 63.31%, #C1D2FF 93.59%), url(/sec-use_case-${idx}.webp) lightgray 50% / cover no-repeat`,
+                    backgroundBlendMode: "hard-light, normal",
+                  }}
+                >
+                  <div className="text-base font-bold">{id}</div>
+                  <div className="-m-10 space-y-2.5 overflow-hidden rounded-b-[24px] bg-linear-[180deg,rgba(35,23,67,0.00)_1.41%,#170E2A_56.17%] p-10">
+                    <div className="text-[33px] leading-[1.2]">{title}</div>
+                    <div className="text-base opacity-80">{description}</div>
                   </div>
                 </div>
               </li>

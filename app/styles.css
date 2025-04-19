@@ -5,8 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --font-spline-sans: "Spline Sans", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins";
+  --font-space-grotesk: "Space Grotesk";
 
   --gradient: 90deg, #45b2ff 0%, #1453f1 100%;
   --gradient-hover: 90deg, #14f195 0%, #9945ff 100%;
@@ -122,9 +122,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
 
   /* Font */
-  --default-font-family: var(--font-spline-sans);
-  --font-spline-sans: var(--font-spline-sans);
-  --font-inter: var(--font-inter);
+  --font-poppins: var(--font-poppins);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --default-font-family: var(--font-space-grotesk), sans-serif;
 
   /* Spacing */
   --spacing-15: --spacing(15);

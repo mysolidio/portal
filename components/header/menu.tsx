@@ -155,7 +155,7 @@ const HeaderMenu: FC = () => {
           {items.map(({ label, subItems, description }, idx) => (
             <NavigationMenuItem key={idx} value={label}>
               <NavigationMenuTrigger
-                className="font-inter h-14 border-b border-transparent bg-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white hover:bg-transparent"
+                className="h-14 border-b border-transparent bg-transparent px-0 text-base font-medium text-white capitalize transition-colors hover:border-white hover:bg-transparent"
                 onMouseEnter={() => {
                   if (label === "Use Cases") {
                     setActiveUseCase("KYC");
@@ -270,7 +270,7 @@ const HeaderMenu: FC = () => {
                 <Fragment key={idx}>
                   <Link
                     href={href}
-                    className="font-inter my-2 block px-0 py-6 text-base font-medium text-white capitalize"
+                    className="my-2 block px-0 py-6 text-base font-medium text-white capitalize"
                   >
                     {label}
                   </Link>

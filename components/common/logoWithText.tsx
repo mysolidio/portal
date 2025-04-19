@@ -14,13 +14,13 @@ export default function LogoWithText({ size, className }: Props) {
     <Link
       href="/"
       className={cn(
-        "inline-flex shrink-0 items-center gap-4 font-bold tracking-[0.28px]",
+        "!font-poppins inline-flex shrink-0 items-center gap-4 !font-medium -tracking-[2.11px]",
         className,
       )}
     >
       <Logo size={size} />
       <div
-        className="!font-spline-sans text-inherit select-none"
+        className="text-inherit select-none"
         style={{ fontSize: size, lineHeight: `${size}px` }}
       >
         Solid

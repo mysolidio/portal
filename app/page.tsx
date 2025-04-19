@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <div className="h-screen w-full overflow-x-hidden scroll-smooth">
       <Header />
+
       <Hero />
       <section className="snap-start">
         <div className="relative">
@@ -22,11 +23,7 @@ export default function Home() {
       <Questions />
       <GetStarted />
 
-      <section className="snap-start">
-        <div className="relative">
-          <Footer />
-        </div>
-      </section>
+      <Footer />
     </div>
   );
 }

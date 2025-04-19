@@ -1,6 +1,14 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cva, type VariantProps } from "class-variance-authority";
-import * as React from "react";
+import {
+  useCallback,
+  ComponentProps,
+  Children,
+  ReactElement,
+  ReactNode,
+  useMemo,
+  cloneElement,
+} from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -10,9 +18,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-black border border-[#6B6B6B] text-white rounded-full hover:bg-linear-(--gradient) drop-shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
+          "bg-black border border-[#6B6B6B] text-white hover:bg-linear-(--gradient) hover:shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
         primary:
-          "bg-linear-(--gradient) border border-[#6B6B6B] text-white rounded-full hover:bg-linear-(--gradient-2) drop-shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
+          "bg-linear-(--gradient) border border-[#6B6B6B] text-white hover:bg-linear-(--gradient-2) shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
         // TODO: Deprecated variants, remove them
         special:
           "bg-blue-600 text-white disabled:bg-linear-(--gradient-disabled) hover:bg-blue-500 hover:shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all",
@@ -25,10 +33,13 @@ const buttonVariants = cva(
           "text-white bg-white/30 backdrop-blur-sm hover:bg-white/50 hover:text-white hover:shadow-[0_0_10px_rgba(255,255,255,0.3)] disabled:text-[#666666]",
       },
       size: {
-        sm: "rounded-full h-9 px-6 text-sm",
         md: "rounded-full h-10 px-6 text-sm font-light",
+        special:
+          "rounded-full h-16 px-11 text-[18px] leading-[0.371px] font-bold",
+        // TODO: Deprecated variants, remove them
+        sm: "rounded-full h-9 px-6 text-sm",
         lg: "rounded-full h-11 px-6 text-base",
-        xl: "rounded-full h-16 px-6 text-lg font-bold",
+        xl: "rounded-full h-12 px-6 text-lg font-bold",
       },
     },
     defaultVariants: {
@@ -43,19 +54,49 @@ function Button({
   variant,
   size,
   asChild = false,
+  children,
   ...props
-}: React.ComponentProps<"button"> &
+}: ComponentProps<"button"> &
   VariantProps<typeof buttonVariants> & {
     asChild?: boolean;
   }) {
   const Comp = asChild ? Slot : "button";
+
+  const processChild = useCallback(
+    (child: ComponentProps<"button">["children"]): ReactNode => {
+      return Children.map(child, (_child) => {
+        if (typeof _child === "string" || typeof _child === "number") {
+          return <span className="flex-1 text-center">{_child}</span>;
+        }
+        return _child;
+      });
+    },
+    [],
+  );
+
+  const processNestedChild = useCallback(
+    (child: ComponentProps<"button">["children"]): ReactNode => {
+      const element = child as ReactElement<{ children?: ReactNode }>;
+      const nestedChild = element.props.children;
+      return cloneElement(element, {}, processChild(nestedChild));
+    },
+    [processChild],
+  );
+
+  // Process children to wrap text content in a span
+  const processedChildren = useMemo(
+    () => (asChild ? processNestedChild(children) : processChild(children)),
+    [asChild, children, processChild, processNestedChild],
+  );
 
   return (
     <Comp
       data-slot="button"
       className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-    />
+    >
+      {processedChildren}
+    </Comp>
   );
 }
 

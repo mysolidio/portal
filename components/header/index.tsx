@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import Logo from "@/common/logo";
+import LogoChrome from "@/common/logoChrome";
 import LogoWithText from "@/components/common/logoWithText";
 import { cn } from "@/lib/utils";
 import {
@@ -56,7 +56,7 @@ export default function Header() {
 
         {/* Centered Logo */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Logo size={58} className="text-white" />
+          <LogoChrome className="size-[58px]" />
         </div>
 
         {/* Right Menu */}

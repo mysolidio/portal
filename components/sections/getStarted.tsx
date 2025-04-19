@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import LogoWithText from "@/common/logoWithText";
+import LogoTextChrome from "@/common/logoTextChrome";
 import { ArrowUpRightIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
 
@@ -24,7 +24,7 @@ export default function GetStartedSection() {
   return (
     <section className="bg-[#121212] py-20 text-white">
       <div className="container space-y-10 text-center max-lg:px-10">
-        <LogoWithText size={52} />
+        <LogoTextChrome className="h-[52px]" />
         <div className="text-[32px] leading-[1.2] lg:text-[48px] lg:font-medium">
           Ready to get Started?
         </div>

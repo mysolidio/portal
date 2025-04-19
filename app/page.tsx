@@ -19,9 +19,7 @@ export default function Home() {
       </section>
       <Services />
       <UseCases />
-      <section className="snap-start">
-        <Questions />
-      </section>
+      <Questions />
 
       <section className="snap-start">
         <div className="relative">

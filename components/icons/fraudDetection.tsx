@@ -1,22 +1,22 @@
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 
-interface FraudDetectionProps extends HTMLAttributes<HTMLDivElement> {
-  size?: number;
-}
+import { cn } from "@/lib/utils";
 
 export default function FraudDetection({
   className,
-  size = 32,
   ...props
-}: FraudDetectionProps) {
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={className} {...props}>
+    <div
+      {...props}
+      className={cn("relative aspect-square shrink-0", className)}
+    >
       <Image
         src="/icons/fraud-detection.svg"
         alt="Fraud Detection Icon"
-        width={size}
-        height={size}
+        fill
+        className="object-contain object-center"
       />
     </div>
   );

@@ -1,22 +1,22 @@
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 
-interface DataLockProps extends HTMLAttributes<HTMLDivElement> {
-  size?: number;
-}
+import { cn } from "@/lib/utils";
 
 export default function DataLock({
   className,
-  size = 32,
   ...props
-}: DataLockProps) {
+}: HTMLAttributes<HTMLDivElement>) {
   return (
-    <div className={className} {...props}>
+    <div
+      {...props}
+      className={cn("relative aspect-square shrink-0", className)}
+    >
       <Image
         src="/icons/data-lock.svg"
         alt="Data Lock Icon"
-        width={size}
-        height={size}
+        fill
+        className="object-contain object-center"
       />
     </div>
   );

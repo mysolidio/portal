@@ -5,7 +5,7 @@ import Questions from "@/components/sections/questions";
 import Services from "@/components/sections/services";
 import Solarid from "@/components/sections/solarid";
 import Solution from "@/components/sections/solution";
-import UseCasesSection from "@/components/sections/usecases";
+import UseCases from "@/components/sections/useCases";
 
 export default function Home() {
   return (
@@ -17,12 +17,8 @@ export default function Home() {
           <Solution />
         </div>
       </section>
-      <section className="snap-start">
-        <Services />
-      </section>
-      <section className="snap-start">
-        <UseCasesSection />
-      </section>
+      <Services />
+      <UseCases />
       <section className="snap-start">
         <Questions />
       </section>

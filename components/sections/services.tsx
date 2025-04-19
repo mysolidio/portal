@@ -4,7 +4,6 @@ import {
   DataScientistIcon,
   FraudDetectionIcon,
 } from "@/icons";
-import { cn } from "@/lib/utils";
 
 const items = [
   {
@@ -46,13 +45,7 @@ export default function ServicesSection() {
           {items.map(({ title, description, Icon }, idx) => (
             <div
               key={idx}
-              className={cn(
-                "relative z-1 rounded-[21px] border border-transparent bg-[#151513] p-7 lg:space-y-8",
-                "before:absolute before:inset-0 before:-z-[1] before:rounded-[21px]",
-                "before:bg-[linear-gradient(118.71deg,_#FFFFFF_11.96%,_#212121_45.04%,_#BDBDBD_66.69%,_#232323_75.79%,_#646464_86.15%)]",
-                "after:absolute after:inset-[1px] after:z-[-1] after:rounded-[20px] after:bg-[#151513]",
-                "space-y-[42px]",
-              )}
+              className="border-linear-gradient space-y-[42px] p-7 [--radius:20px] lg:space-y-8"
             >
               <Icon className="size-[65px] shrink-0 lg:size-[100px]" />
               <div className="space-y-2">

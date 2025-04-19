@@ -40,7 +40,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed z-50 w-full bg-black py-4 backdrop-blur-md transition-all duration-500 ease-in-out",
+        "fixed z-50 w-full bg-black backdrop-blur-md transition-all duration-500 ease-in-out lg:py-4",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
@@ -69,7 +69,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Layout */}
-      <div className="flex h-16 items-center justify-between p-6 lg:hidden">
+      <div className="flex h-20 items-center justify-between p-6 lg:hidden">
         <LogoWithText size={32} className="text-white" />
         <MobileMenu isOpen={isMobileMenuOpen} setIsOpen={setIsMobileMenuOpen} />
       </div>

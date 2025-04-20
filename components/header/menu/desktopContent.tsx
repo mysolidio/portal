@@ -23,7 +23,7 @@ const SubItem: FC<Props> = ({ data, onMouseEnter, ...props }) => {
       onMouseEnter={onMouseEnter}
     >
       <div className="flex items-center justify-between text-white *:transition-all">
-        <div className="text-base leading-6 font-light group-hover:bg-linear-[90deg,#C0A3D0_0%,#98B5FF_100%] group-hover:bg-clip-text group-hover:font-bold group-hover:text-transparent">
+        <div className="text-base leading-6 font-light group-hover:bg-linear-[90deg,#C0A3D0_0%,#98B5FF_100%] group-hover:bg-clip-text group-hover:font-bold group-hover:text-transparent group-hover:[-webkit-text-fill-color:transparent]">
           {data.label}
         </div>
         <ArrowRightLinearGradientIcon className="inline-block size-6 opacity-0 group-hover:opacity-100" />
@@ -49,7 +49,7 @@ const DesktopContent: FC<DesktopContentProps> = ({ item }) => {
       <div className="mx-auto w-(--header-content-width) pt-2 pb-9 text-white">
         <div className="flex content-stretch gap-[52px] *:pt-2.5 *:pb-4">
           {activeItem && (
-            <div className="w-[290px] shrink-0 border-r-[0.5px] border-white pr-8">
+            <div className="w-[290px] shrink-0 border-r-[0.5px] border-white pr-8 *:bg-linear-[90deg,#C0A3D0_0%,#98B5FF_100%] *:bg-clip-text *:[-webkit-text-fill-color:transparent]">
               <div className="text-base font-bold">
                 {activeItem?.label ?? label}
               </div>

@@ -13,11 +13,7 @@ export default function Home() {
       <Header />
 
       <Hero />
-      <section className="snap-start">
-        <div className="relative">
-          <Solution />
-        </div>
-      </section>
+      <Solution />
       <Services />
       <UseCases />
       <Questions />

@@ -31,9 +31,9 @@ const items = [
   },
 ];
 
-export default function QuestionsSection() {
+export default function FAQsSection() {
   return (
-    <section className="bg-black py-20 text-white lg:py-30">
+    <section className="bg-white py-20 text-black lg:py-30">
       <div className="container lg:max-w-5xl">
         <div className="text-center text-[32px] leading-[1.2] lg:text-[48px]">
           Frequently asked questions
@@ -50,7 +50,7 @@ export default function QuestionsSection() {
                 </div>
                 <ChevronDownIcon className="size-4 shrink-0 transition-transform duration-300 group-open:rotate-180" />
               </summary>
-              <div className="mt-4 rounded-[8px] bg-linear-[0deg,_#2D2D2D_0%,_rgba(45,45,45,0.00)_100%] p-4 text-sm leading-[1.5] opacity-80 lg:rounded-[16px] lg:p-6 lg:backdrop-blur-[6.5px]">
+              <div className="mt-4 rounded-[8px] bg-gradient-to-t from-[#2D2D2D] from-[-300%] to-white p-4 text-sm leading-[1.5] opacity-80 md:backdrop-blur-[6.5px] lg:rounded-[16px] lg:p-6">
                 {answer}
               </div>
             </details>

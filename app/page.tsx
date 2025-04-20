@@ -1,8 +1,8 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import FAQs from "@/components/sections/faqs";
 import GetStarted from "@/components/sections/getStarted";
 import Hero from "@/components/sections/hero";
-import Questions from "@/components/sections/questions";
 import Services from "@/components/sections/services";
 import Solution from "@/components/sections/solution";
 import UseCases from "@/components/sections/useCases";
@@ -16,7 +16,7 @@ export default function Home() {
       <Solution />
       <Services />
       <UseCases />
-      <Questions />
+      <FAQs />
       <GetStarted />
 
       <Footer />

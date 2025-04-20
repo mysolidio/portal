@@ -53,12 +53,6 @@ export default function UseCasesSection() {
                 className={cn(
                   "border-linear-gradient aspect-square w-[calc(100%-64px)] shrink-0 snap-center p-px shadow [--radius:24px] first:ml-4 last:mr-4 lg:size-[482px] lg:snap-start",
                 )}
-                // style={{
-                //   // TODO: Add background image
-                //   // backgroundImage: `url(/sec-use_case-${idx}.webp)`,
-                //   background: `radial-gradient(163.67% 163.67% at 50% 146.15%, #492B5C 11.59%, #BFA3D1 63.31%, #C1D2FF 93.59%), url(/sec-use_case-${idx}.webp) lightgray 50% / cover no-repeat`,
-                //   backgroundBlendMode: "hard-light, normal",
-                // }}
               >
                 <div
                   className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] p-10 text-white"

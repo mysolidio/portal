@@ -55,9 +55,7 @@ export default function Header() {
         </NavigationMenu>
 
         {/* Centered Logo */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <LogoChrome className="size-[58px]" />
-        </div>
+        <LogoChrome className="absolute top-1/2 left-1/2 size-[58px] -translate-x-1/2 -translate-y-1/2" />
 
         {/* Right Menu */}
         <NavigationMenu className="absolute left-[calc(50%+100px)]">

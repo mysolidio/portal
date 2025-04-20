@@ -104,6 +104,7 @@ export const items: NavigationItemType[] = [
       {
         label: "Whitepaper",
         href: "https://docsend.com/v/mdysq/solid_whitepaper",
+        newTab: true,
       },
       {
         label: "What is Onchain KYC?",

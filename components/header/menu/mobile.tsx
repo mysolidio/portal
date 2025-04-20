@@ -23,7 +23,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
       >
         <MenuIcon size={24} className="text-white" />
       </DrawerTrigger>
-      <DrawerContent className="!w-screen !border-r-0 bg-black/60 shadow-none backdrop-blur-md outline-none">
+      <DrawerContent className="!w-screen !border-r-0 bg-black shadow-none outline-none">
         <DrawerTitle />
         <nav className="flex h-20 items-center justify-between p-6">
           <LogoWithText size={32} className="text-white" />
@@ -35,7 +35,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
             <X size={24} />
           </button>
         </nav>
-        <div className="flex h-full flex-col gap-6 px-6 pt-15 pb-6">
+        <div className="flex h-full flex-col gap-6 p-6">
           <div className="max-h-[calc(100vh-288px)] grow overflow-auto">
             {items.map(({ label, href }, idx) => (
               <Fragment key={idx}>
@@ -45,7 +45,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                 >
                   {label}
                 </Link>
-                <div className="h-px bg-[#082659] last:bg-transparent" />
+                <div className="h-[0.5px] bg-white last:bg-transparent" />
               </Fragment>
             ))}
           </div>

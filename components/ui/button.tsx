@@ -18,7 +18,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-black border border-[#6B6B6B] text-white hover:bg-linear-(--gradient) hover:shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
+          "bg-white border border-black text-black hover:bg-linear-(--gradient) hover:shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)] hover:text-white",
         primary:
           "bg-linear-(--gradient) border border-[#6B6B6B] text-white hover:bg-linear-(--gradient-2) shadow-[0px_11px_34px_0px_rgba(255,255,255,0.23)]",
         // TODO: Deprecated variants, remove them

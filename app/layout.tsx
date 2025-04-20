@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Verify once, use anywhere, we provides a global standard for digital identity and data self sovereignty",
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/logo_black.svg", type: "image/svg+xml" }],
   },
 };
 

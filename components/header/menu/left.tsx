@@ -16,7 +16,7 @@ const LeftMenu: FC = () => {
     <>
       {leftItems.map((item, idx) => (
         <NavigationMenuItem key={idx} value={item.label}>
-          <NavigationMenuTrigger className="h-14 border-b-2 border-transparent bg-transparent px-0 text-base font-light text-white capitalize transition-colors hover:border-white hover:bg-transparent hover:font-bold data-[state=open]:border-white data-[state=open]:font-bold">
+          <NavigationMenuTrigger className="h-14 border-b-2 border-transparent bg-transparent px-0 text-base font-light text-black capitalize transition-colors hover:border-black hover:bg-transparent hover:font-bold data-[state=open]:border-black data-[state=open]:font-bold">
             {item.label}
           </NavigationMenuTrigger>
           <NavigationMenuContent className="!w-full p-4">

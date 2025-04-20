@@ -1,8 +1,9 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
-import LogoChrome from "@/common/logoChrome";
+import Logo from "@/common/logo";
 import LogoWithText from "@/components/common/logoWithText";
 import { cn } from "@/lib/utils";
 import {
@@ -40,7 +41,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "fixed z-50 w-full bg-black backdrop-blur-md transition-all duration-500 ease-in-out lg:py-4",
+        "fixed z-50 w-full bg-black transition-all duration-500 ease-in-out lg:bg-white lg:py-4",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
@@ -51,18 +52,20 @@ export default function Header() {
           <NavigationMenuList className="gap-12">
             <LeftMenu />
           </NavigationMenuList>
-          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-black" />
+          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-white" />
         </NavigationMenu>
 
         {/* Centered Logo */}
-        <LogoChrome className="absolute top-1/2 left-1/2 size-[58px] -translate-x-1/2 -translate-y-1/2" />
+        <Link href="/" className="shrink-0 text-black">
+          <Logo className="absolute top-1/2 left-1/2 size-[58px] -translate-x-1/2 -translate-y-1/2" />
+        </Link>
 
         {/* Right Menu */}
         <NavigationMenu className="absolute left-[calc(50%+100px)]">
           <NavigationMenuList className="gap-12">
             <RightMenu />
           </NavigationMenuList>
-          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-black" />
+          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-white" />
         </NavigationMenu>
       </div>
 

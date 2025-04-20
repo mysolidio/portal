@@ -30,14 +30,15 @@ const items = [
 
 export default function ServicesSection() {
   return (
-    <div className="bg-black py-20 text-white">
-      <div className="container space-y-15">
-        <div className="mx-auto max-w-2xl lg:mx-0 [&>*]:text-center lg:[&>*]:text-left">
-          <div className="text-xs font-bold tracking-[18px] uppercase lg:text-xl lg:font-light">
+    <div className="bg-white py-20 text-black">
+      <div className="container space-y-10 lg:space-y-15">
+        <div className="mx-auto max-w-2xl *:text-center md:mx-0 md:*:text-left">
+          <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
             Services
           </div>
-          <div className="mt-8 text-[32px] leading-[1.2] font-normal lg:mt-4 lg:text-[58px] lg:font-light">
-            Your gateway to web3
+          <div className="mt-8 text-[32px] leading-[1.2] font-normal md:mt-4 md:font-light lg:text-[58px]">
+            Your gateway <br className="md:hidden" />
+            to web3
           </div>
         </div>
 
@@ -45,7 +46,7 @@ export default function ServicesSection() {
           {items.map(({ title, description, Icon }, idx) => (
             <div
               key={idx}
-              className="border-linear-gradient space-y-[42px] p-7 [--radius:20px] lg:space-y-8"
+              className="border-linear-gradient space-y-[42px] p-7 [--radius:20px] max-lg:px-5 lg:space-y-8"
             >
               <Icon className="size-[65px] shrink-0 lg:size-[100px]" />
               <div className="space-y-2">

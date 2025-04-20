@@ -175,10 +175,10 @@
   @apply relative z-1 rounded-(--radius) border border-transparent bg-(--bg);
 
   &::before {
-    @apply absolute inset-0 -z-1 rounded-(--radius) bg-linear-(--gradient) content-[''];
+    @apply absolute -inset-px -z-1 rounded-(--radius) bg-linear-(--gradient) content-[''];
   }
 
   &::after {
-    @apply absolute inset-[1px] -z-1 rounded-(--radius) bg-(--bg) content-[''];
+    @apply absolute inset-0 -z-1 rounded-(--radius) bg-(--bg) content-[''];
   }
 }

@@ -2,7 +2,7 @@ import DemoButton from "@/common/demoButton";
 
 export default function HeroSection() {
   return (
-    <section className="mt-20 bg-white pt-14 pb-5 text-center text-black lg:pt-10">
+    <section className="relative pt-14 pb-5 text-center text-black lg:pt-10">
       <div className="align-middle text-[90px] leading-[136px] font-medium -tracking-[5.63px] text-[#373737] lg:text-[150px] lg:-tracking-[9.63px]">
         Solid
       </div>

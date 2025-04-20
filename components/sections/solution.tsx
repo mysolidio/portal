@@ -4,7 +4,7 @@ import solutionImage from "@/public/sec-solution.svg";
 
 export default function SolutionSection() {
   return (
-    <div className="bg-white py-5 text-black md:py-0">
+    <section className="relative py-5 text-black md:py-0">
       <div className="container">
         <div className="flex items-center gap-10 max-md:flex-col">
           <div className="relative w-full shrink-0 place-items-center md:w-[300px] lg:w-[360px] xl:w-[480px]">
@@ -33,6 +33,6 @@ export default function SolutionSection() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

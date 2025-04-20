@@ -30,7 +30,7 @@ const items = [
 
 export default function ServicesSection() {
   return (
-    <div className="bg-white py-20 text-black">
+    <section className="relative py-10 text-black lg:py-0">
       <div className="container space-y-10 lg:space-y-15">
         <div className="mx-auto max-w-2xl *:text-center md:mx-0 md:*:text-left">
           <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
@@ -61,6 +61,6 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -33,7 +33,7 @@ const items = [
 
 export default function FAQsSection() {
   return (
-    <section className="bg-white py-20 text-black lg:py-30">
+    <section className="relative py-16 text-black lg:py-24">
       <div className="container lg:max-w-5xl">
         <div className="text-center text-[32px] leading-[1.2] lg:text-[48px]">
           Frequently asked questions

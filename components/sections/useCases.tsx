@@ -29,7 +29,7 @@ const useCases = [
 
 export default function UseCasesSection() {
   return (
-    <section className="bg-white py-20 text-black">
+    <section className="relative pt-15 pb-0 text-black lg:pb-20">
       <div className="container space-y-[68px] lg:space-y-[128px]">
         <div className="mx-auto max-w-6xl [&>*]:text-center">
           <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
@@ -57,8 +57,6 @@ export default function UseCasesSection() {
                 <div
                   className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] p-10 text-white"
                   style={{
-                    // TODO: Add background image
-                    // backgroundImage: `url(/sec-use_case-${idx}.webp)`,
                     background: `radial-gradient(163.67% 163.67% at 50% 146.15%, #492B5C 11.59%, #BFA3D1 63.31%, #C1D2FF 93.59%), url(/sec-use_case-${idx}.webp) lightgray 50% / cover no-repeat`,
                     backgroundBlendMode: "hard-light, normal",
                   }}

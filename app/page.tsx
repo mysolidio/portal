@@ -1,7 +1,6 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import FAQs from "@/components/sections/faqs";
-import GetStarted from "@/components/sections/getStarted";
 import Hero from "@/components/sections/hero";
 import Services from "@/components/sections/services";
 import Solution from "@/components/sections/solution";
@@ -17,7 +16,6 @@ export default function Home() {
       <Services />
       <UseCases />
       <FAQs />
-      <GetStarted />
 
       <Footer />
     </div>

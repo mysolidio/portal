@@ -29,29 +29,29 @@ const useCases = [
 
 export default function UseCasesSection() {
   return (
-    <section className="bg-black py-20 text-white">
-      <div className="container space-y-15">
+    <section className="bg-white py-20 text-black">
+      <div className="container space-y-[68px] lg:space-y-[128px]">
         <div className="mx-auto max-w-6xl [&>*]:text-center">
-          <div className="text-xs font-bold tracking-[18px] uppercase lg:text-xl">
+          <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
             Use Cases
           </div>
-          <div className="mt-[22px] text-[32px] leading-[1.2] font-normal lg:mt-4 lg:text-[48px]">
+          <div className="mt-[22px] text-[32px] leading-[1.2] lg:mt-4 lg:text-[40px]">
             How customers use our services
           </div>
-          <p className="mt-10 text-base leading-[1.5] text-white/80 opacity-80 lg:mt-8 lg:text-[23px]">
+          <p className="mt-10 text-[17px] leading-[1.5] opacity-80 lg:text-[23px]">
             Our platform provides infrastructure and SDKs for applications that
             implement privacy-preserving digital identity, empowering users to
             own their KYC data and share it only with their consent.
           </p>
         </div>
 
-        <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 lg:-mx-20 lg:w-[calc(100%+160px)]">
+        <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 md:-mx-10 md:w-[calc(100%+80px)]">
           <ul className="scroll-hidden -mb-[3*var(--padding-offset)] flex w-full snap-x snap-mandatory scroll-px-4 gap-6 overflow-x-auto">
             {useCases.map(({ id, title, description }, idx) => (
               <li
                 key={idx}
                 className={cn(
-                  "border-linear-gradient aspect-square w-[calc(100%-64px)] shrink-0 snap-center p-px shadow [--radius:24px] first:ml-4 last:mr-4 lg:size-[482px] lg:snap-start",
+                  "border-linear-gradient aspect-square w-[calc(100%-64px)] shrink-0 snap-center shadow [--radius:24px] first:ml-4 last:mr-4 md:size-[482px] md:snap-start",
                 )}
               >
                 <div

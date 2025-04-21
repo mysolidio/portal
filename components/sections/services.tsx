@@ -30,31 +30,30 @@ const items = [
 
 export default function ServicesSection() {
   return (
-    <div className="bg-[#001024] py-20 text-white lg:py-30">
-      <div className="container space-y-15">
-        <div className="mx-auto max-w-2xl lg:mx-0 [&>*]:text-center lg:[&>*]:text-left">
-          <div className="text-[12px] leading-[1.3] font-bold tracking-[6px] uppercase lg:text-[16px]">
+    <section className="relative py-10 text-black lg:py-0">
+      <div className="container space-y-10 lg:space-y-15">
+        <div className="mx-auto max-w-2xl *:text-center md:mx-0 md:*:text-left">
+          <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
             Services
           </div>
-          <div className="mt-2 text-[32px] leading-[1.2] font-semibold lg:mt-4 lg:text-[42px]">
-            Your gateway to web3
+          <div className="mt-8 text-[32px] leading-[1.2] font-normal md:mt-4 md:font-light lg:text-[58px]">
+            Your gateway <br className="md:hidden" />
+            to web3
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-x-12 lg:gap-y-10">
+        <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-x-10 md:gap-y-6 lg:gap-x-[72px]">
           {items.map(({ title, description, Icon }, idx) => (
             <div
               key={idx}
-              className="flex items-start gap-6 rounded-md border border-[#0a2452] bg-[#001838]/50 px-5 py-6 transition-colors duration-300 hover:border-[#1a3a6c]"
+              className="border-linear-gradient space-y-[42px] p-7 [--radius:20px] max-lg:px-5 lg:space-y-8"
             >
-              <div className="rounded-md bg-[#00256c] p-3">
-                <Icon className="size-[40px] shrink-0 text-white" />
-              </div>
+              <Icon className="size-[65px] shrink-0 lg:size-[100px]" />
               <div className="space-y-2">
-                <div className="text-[20px] leading-[1.3] font-semibold text-white">
+                <div className="text-[25px] leading-[1.2] font-normal text-white lg:text-[32px]">
                   {title}
                 </div>
-                <div className="text-[14px] leading-[1.4] text-white opacity-75">
+                <div className="text-sm text-white opacity-60">
                   {description}
                 </div>
               </div>
@@ -62,6 +61,6 @@ export default function ServicesSection() {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

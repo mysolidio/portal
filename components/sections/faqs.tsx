@@ -31,39 +31,32 @@ const items = [
   },
 ];
 
-export default function QuestionsSection() {
+export default function FAQsSection() {
   return (
-    <div className="bg-[#001024] py-20 text-white lg:py-30">
+    <section className="relative py-16 text-black lg:py-24">
       <div className="container lg:max-w-5xl">
-        <div className="mb-10 space-y-3 text-center">
-          <div className="text-[12px] leading-[1.3] font-bold tracking-[4px] uppercase lg:text-[14px]">
-            Knowledge Base
-          </div>
-          <div className="text-center text-[30px] leading-[1.2] font-semibold lg:text-[42px]">
-            Frequently Asked Questions
-          </div>
+        <div className="text-center text-[32px] leading-[1.2] lg:text-[48px]">
+          Frequently asked questions
         </div>
-        <div className="mt-10 space-y-3 lg:mt-6">
+        <div className="mt-10 space-y-2 lg:mt-6">
           {items.map(({ question, answer }, idx) => (
             <details
               key={idx}
-              className="group rounded-md border border-[#0a2452] bg-[#001838]/50 p-4 transition-all hover:border-[#1a3a6c] lg:rounded-lg lg:p-6"
+              className="group rounded-[16px] border border-[#252525] p-4 transition-all select-none lg:rounded-[24px] lg:p-6"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-6 [&::-webkit-details-marker]:hidden [&::marker]:hidden">
-                <div className="text-[16px] leading-[1.3] font-medium group-open:font-bold lg:text-[18px]">
+                <div className="text-base group-open:font-bold lg:font-bold">
                   {question}
                 </div>
-                <div className="flex-shrink-0 rounded-md bg-[#00256c]/70 p-1.5 transition-colors group-open:bg-[#0042b0]/70">
-                  <ChevronDownIcon className="size-4 shrink-0 transition-transform duration-300 group-open:rotate-180" />
-                </div>
+                <ChevronDownIcon className="size-4 shrink-0 transition-transform duration-300 group-open:rotate-180" />
               </summary>
-              <div className="mt-4 rounded-md bg-[#002047] p-4 text-[15px] leading-relaxed text-slate-200 lg:rounded-md lg:p-5">
+              <div className="mt-4 rounded-[8px] bg-gradient-to-t from-[#2D2D2D] from-[-300%] to-white p-4 text-sm leading-[1.5] opacity-80 md:backdrop-blur-[6.5px] lg:rounded-[16px] lg:p-6">
                 {answer}
               </div>
             </details>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

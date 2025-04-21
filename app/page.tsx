@@ -1,40 +1,26 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import FAQs from "@/components/sections/faqs";
 import Hero from "@/components/sections/hero";
-import Questions from "@/components/sections/questions";
+import Partners from "@/components/sections/partners";
 import Services from "@/components/sections/services";
-import Solarid from "@/components/sections/solarid";
 import Solution from "@/components/sections/solution";
-import UseCasesSection from "@/components/sections/usecases";
+import UseCases from "@/components/sections/useCases";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full snap-y snap-mandatory overflow-x-hidden scroll-smooth">
-      <Header />
-      <section className="min-h-screen snap-start">
-        <Hero />
-      </section>
-      <section className="snap-start">
-        <div className="relative">
-          <Solution />
-        </div>
-      </section>
-      <section className="snap-start">
-        <Services />
-      </section>
-      <section className="snap-start">
-        <UseCasesSection />
-      </section>
-      <section className="snap-start">
-        <Questions />
-      </section>
+    <div className="relative">
+      <div className="absolute inset-0 size-full bg-[url('/bg-dots.webp'),_url('/bg-center_top.webp')] bg-[size:auto_789px,_100%_auto] bg-[position:center_1510px,_center_1400px] bg-no-repeat lg:bg-[position:center_920px,_center_top]" />
+      {/* <div className="absolute inset-0 size-full bg-[url('/bg-top_right.webp'),_url('/bg-middle_left.webp')] bg-[size:auto_auto,_auto_auto] bg-[position:top_right,_left_1780px] bg-no-repeat max-lg:hidden" /> */}
 
-      <section className="snap-start">
-        <div className="relative">
-          <Solarid />
-          <Footer />
-        </div>
-      </section>
+      <Header />
+      <Hero />
+      <Solution />
+      <Partners />
+      <Services />
+      <UseCases />
+      <FAQs />
+      <Footer />
     </div>
   );
 }

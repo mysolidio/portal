@@ -36,7 +36,7 @@ export default function Socials({
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "grid size-10 place-content-center rounded-full bg-[#002458] text-white",
+            "grid size-8 place-content-center rounded-full bg-[#f9f9f9] text-black",
             linkClassName,
           )}
         >

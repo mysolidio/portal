@@ -3,7 +3,7 @@ import { HTMLAttributes } from "react";
 
 import { cn } from "@/lib/utils";
 
-export default function Checker({
+export default function ArrowRightLinearGradient({
   className,
   ...props
 }: HTMLAttributes<HTMLDivElement>) {
@@ -13,8 +13,8 @@ export default function Checker({
       className={cn("relative aspect-square shrink-0", className)}
     >
       <Image
-        src="/icons/checker.svg"
-        alt="Checker Icon"
+        src="/icons/arrow_right_linear_gradient.svg"
+        alt="Arrow Right Icon"
         fill
         className="object-contain object-center"
       />

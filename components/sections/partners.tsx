@@ -16,7 +16,7 @@ export default async function PartnersSection() {
               >
                 {/* Duplicate set of logos for seamless loop */}
                 <Image
-                  src={`/sec-partners-${idx % 7 === 5 ? "4.webp" : `${idx % 7}.svg`}`}
+                  src={`/sec-partners-${idx % 7 === 5 ? "5.webp" : `${idx % 7}.svg`}`}
                   alt="Partner"
                   fill
                   className="object-contain"

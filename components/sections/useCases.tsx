@@ -1,3 +1,7 @@
+"use client";
+
+import { useRef, MouseEvent, useCallback } from "react";
+
 import { cn } from "@/lib/utils";
 
 const useCases = [
@@ -28,6 +32,32 @@ const useCases = [
 ];
 
 export default function UseCasesSection() {
+  const scrollRef = useRef<HTMLUListElement>(null);
+  const mouseDown = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  const startDragging = useCallback((e: MouseEvent) => {
+    mouseDown.current = true;
+    if (scrollRef.current) {
+      startX.current = e.pageX - scrollRef.current.offsetLeft;
+      scrollLeft.current = scrollRef.current.scrollLeft;
+    }
+  }, []);
+
+  const stopDragging = useCallback(() => {
+    mouseDown.current = false;
+  }, []);
+
+  const move = useCallback((e: MouseEvent) => {
+    e.preventDefault();
+    if (!mouseDown.current || !scrollRef.current) return;
+
+    const x = e.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX.current) * 1.5;
+    scrollRef.current.scrollLeft = scrollLeft.current - walk;
+  }, []);
+
   return (
     <section className="relative pt-15 pb-0 text-black lg:pb-20">
       <div className="container space-y-[68px] lg:space-y-[128px]">
@@ -46,13 +76,21 @@ export default function UseCasesSection() {
         </div>
 
         <div className="relative -mx-4 w-[calc(100%+32px)] shrink-0 md:-mx-10 md:w-[calc(100%+80px)]">
-          <ul className="scroll-hidden -mb-[3*var(--padding-offset)] flex w-full snap-x snap-mandatory scroll-px-4 gap-6 overflow-x-auto">
+          <ul
+            ref={scrollRef}
+            onMouseDown={startDragging}
+            onMouseLeave={stopDragging}
+            onMouseUp={stopDragging}
+            onMouseMove={move}
+            className={cn(
+              "scroll-hidden relative -mb-[3*var(--padding-offset)] flex w-full scroll-px-4 gap-6 overflow-x-auto",
+              "cursor-grab select-none active:cursor-grabbing",
+            )}
+          >
             {useCases.map(({ id, title, description }, idx) => (
               <li
                 key={idx}
-                className={cn(
-                  "border-linear-gradient aspect-square w-[calc(100%-64px)] shrink-0 snap-center shadow [--radius:24px] first:ml-4 last:mr-4 md:size-[482px] md:snap-start",
-                )}
+                className="border-linear-gradient relative z-0 aspect-square w-[calc(100%-64px)] shrink-0 shadow [--radius:24px] first:ml-4 last:mr-4 md:size-[482px]"
               >
                 <div
                   className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] p-10 text-white"

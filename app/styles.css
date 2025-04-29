@@ -15,6 +15,8 @@
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.91 0.15455 194.7689);
   --secondary-foreground: oklch(1 0 0);
+  --dark-blue: oklch(0.17 0.0493 250.69);
+  --dark-blue-foreground: oklch(0 0 0);
 }
 
 @theme inline {
@@ -26,6 +28,8 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-dark-blue: var(--dark-blue);
+  --color-dark-blue-foreground: var(--dark-blue-foreground);
 
   /* Font */
   --font-poppins: var(--font-poppins);

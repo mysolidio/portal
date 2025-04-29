@@ -4,6 +4,7 @@ import { Fragment } from "react";
 
 import LogoWithText from "@/common/logoWithText";
 import Socials from "@/common/socials";
+import { cn } from "@/lib/utils";
 
 const itemGroups = [
   {
@@ -78,9 +79,13 @@ const itemGroups = [
   },
 ];
 
-export default function Footer() {
+type Props = {
+  className?: string;
+};
+
+export default function Footer({ className }: Props) {
   return (
-    <footer className="bg-[#121212] py-20 text-white">
+    <footer className={cn("bg-dark-blue py-20 text-white", className)}>
       <div className="relative container grid grid-cols-1 gap-y-10 px-10 md:grid-cols-[1fr_auto] md:gap-x-15 md:px-4 lg:px-8">
         <div className="place-self-center md:place-self-start">
           <LogoWithText size={48} className="text-white" />

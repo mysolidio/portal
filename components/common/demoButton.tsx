@@ -1,6 +1,6 @@
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
-import { ArrowUpRightIcon } from "@/icons";
 import { cn } from "@/lib/utils";
 import { Button } from "@/ui/button";
 
@@ -14,7 +14,7 @@ const DemoButton: typeof Button = ({ className, ...props }) => {
     >
       <Link href="https://forms.gle/ax3Ds57nmMHQY97d7" target="_blank">
         Book a Demo
-        <ArrowUpRightIcon className="size-8" />
+        <ArrowUpRight className="size-6" />
       </Link>
     </Button>
   );

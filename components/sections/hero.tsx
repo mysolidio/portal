@@ -1,20 +1,25 @@
 import DemoButton from "@/common/demoButton";
+import { cn } from "@/lib/utils";
 
-export default function HeroSection() {
+type Props = {
+  className?: string;
+};
+
+export default function HeroSection({ className }: Props) {
   return (
-    <section className="relative pt-14 pb-5 text-center text-black lg:pt-10">
-      <div className="align-middle text-[90px] leading-[136px] font-medium -tracking-[5.63px] text-[#373737] lg:text-[150px] lg:-tracking-[9.63px]">
+    <section className={cn("relative text-center text-black", className)}>
+      <div className="font-poppins align-middle text-[90px] leading-[136px] font-medium -tracking-[5.63px] text-[#373737] lg:text-[150px] lg:-tracking-[9.63px] lg:text-black">
         Solid
       </div>
-      <div className="mt-8 align-middle text-[32px] leading-[30px] font-light tracking-[0.3px] md:mt-14 md:text-[40px]">
+      <div className="mt-5 align-middle text-[25px] leading-[30px] font-light tracking-[0.3px] capitalize md:mt-10 md:text-[40px]">
         Verify Once. <br className="md:hidden" />
         Use Anywhere.
       </div>
-      <div className="mt-6 text-base font-light lg:mt-7 lg:text-[20px]">
+      <div className="mt-6 text-base font-light lg:mt-4 lg:text-[20px]">
         A global standard for digital identity <br className="md:hidden" /> and
         data self sovereignty.
       </div>
-      <DemoButton className="mt-16 h-16 px-11 text-lg font-bold lg:mt-20" />
+      <DemoButton className="mt-10 h-16 px-11 text-base capitalize" />
     </section>
   );
 }

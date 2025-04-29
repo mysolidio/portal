@@ -1,30 +1,30 @@
-import {
-  CheckerIcon,
-  DataLockIcon,
-  DataScientistIcon,
-  FraudDetectionIcon,
-} from "@/icons";
+import Image from "next/image";
+
+import checkIcon from "@/assets/images/checker.svg";
+import dataLockIcon from "@/assets/images/dataLock.svg";
+import fraudDetectionIcon from "@/assets/images/fraudDetection.svg";
+import onchainKycIcon from "@/assets/images/onchainKyc.svg";
 
 const items = [
   {
     title: "KYC Lifecycle Management",
     description: "Manages the life cycle of KYC processes.",
-    Icon: DataLockIcon,
+    icon: dataLockIcon,
   },
   {
     title: "Onchain KYC SDK",
     description: "Easy-to-integrate SDK for Web3 applications.",
-    Icon: DataScientistIcon,
+    icon: onchainKycIcon,
   },
   {
     title: "Fraud Detection",
     description: "Monitors for suspicious activity based onchain activity.",
-    Icon: FraudDetectionIcon,
+    icon: fraudDetectionIcon,
   },
   {
     title: "Periodic AML Compliance Checker",
     description: "Ensures ongoing AML compliance.",
-    Icon: CheckerIcon,
+    icon: checkIcon,
   },
 ];
 
@@ -43,12 +43,16 @@ export default function ServicesSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-2.5 md:grid-cols-2 md:gap-x-10 md:gap-y-6 lg:gap-x-[72px]">
-          {items.map(({ title, description, Icon }, idx) => (
+          {items.map(({ title, description, icon }, idx) => (
             <div
               key={idx}
               className="border-linear-gradient space-y-[42px] p-7 [--radius:20px] max-lg:px-5 lg:space-y-8"
             >
-              <Icon className="size-[65px] shrink-0 lg:size-[100px]" />
+              <Image
+                src={icon}
+                alt={title}
+                className="size-[65px] shrink-0 lg:size-[100px]"
+              />
               <div className="space-y-2">
                 <div className="text-[25px] leading-[1.2] font-normal text-white lg:text-[32px]">
                   {title}

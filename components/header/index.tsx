@@ -1,20 +1,14 @@
 "use client";
 
-import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import Logo from "@/common/logo";
 import LogoWithText from "@/components/common/logoWithText";
 import { cn } from "@/lib/utils";
-import {
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuViewport,
-} from "@/ui/navigation-menu";
 
-import LeftMenu from "./menu/left";
+import CTAButton from "./menu/ctaButton";
+import DesktopMenu from "./menu/desktop";
 import MobileMenu from "./menu/mobile";
-import RightMenu from "./menu/right";
 
 export default function Header() {
   const [isScrollUp, setIsScrollUp] = useState(false);
@@ -41,32 +35,15 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "relative z-50 w-full bg-black transition-all duration-500 ease-in-out lg:bg-white lg:py-4",
+        "relative z-50 w-full bg-black transition-all duration-500 ease-in-out lg:bg-[#F3F5F7] lg:py-4",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >
       {/* Desktop Layout */}
-      <div className="relative container hidden h-16 items-center [--header-content-width:936px] lg:flex">
-        {/* Left Menu */}
-        <NavigationMenu className="absolute right-[calc(50%+100px)]">
-          <NavigationMenuList className="gap-12">
-            <LeftMenu />
-          </NavigationMenuList>
-          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-white" />
-        </NavigationMenu>
-
-        {/* Centered Logo */}
-        <Link href="/" className="shrink-0 text-black">
-          <Logo className="absolute top-1/2 left-1/2 size-[58px] -translate-x-1/2 -translate-y-1/2" />
-        </Link>
-
-        {/* Right Menu */}
-        <NavigationMenu className="absolute left-[calc(50%+100px)]">
-          <NavigationMenuList className="gap-12">
-            <RightMenu />
-          </NavigationMenuList>
-          <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-white" />
-        </NavigationMenu>
+      <div className="relative container hidden h-16 items-center gap-12 lg:flex">
+        <Logo size={52} />
+        <DesktopMenu className="max-w-full grow justify-start" />
+        <CTAButton className="h-10 min-w-64 px-14" />
       </div>
 
       {/* Mobile Layout */}

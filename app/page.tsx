@@ -14,7 +14,7 @@ export default function Home() {
       {/* <div className="absolute inset-0 size-full bg-[url('/bg-top_right.webp'),_url('/bg-middle_left.webp')] bg-[size:auto_auto,_auto_auto] bg-[position:top_right,_left_1780px] bg-no-repeat max-lg:hidden" /> */}
 
       <Header />
-      <Hero />
+      <Hero className="mt-4 lg:mt-12" />
       <Solution />
       <Partners />
       <Services />

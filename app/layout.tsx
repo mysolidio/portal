@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Space_Grotesk } from "next/font/google";
+import { Manrope, Poppins } from "next/font/google";
 
 import "./styles.css";
 
@@ -10,8 +10,8 @@ const poppins = Poppins({
   fallback: ["sans-serif"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   fallback: ["sans-serif"],
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Verify once, use anywhere, we provides a global standard for digital identity and data self sovereignty",
   icons: {
-    icon: [{ url: "/logo_black.svg", type: "image/svg+xml" }],
+    icon: [{ url: "/logo.svg", type: "image/svg+xml" }],
   },
 };
 
@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${spaceGrotesk.variable}`}>
+      <body className={`${poppins.variable} ${manrope.variable} bg-[#F3F5F7]`}>
         {children}
       </body>
     </html>

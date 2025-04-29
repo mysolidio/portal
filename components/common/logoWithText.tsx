@@ -1,8 +1,7 @@
 import Link from "next/link";
 
+import LogoIcon from "@/icons/logo";
 import { cn } from "@/lib/utils";
-
-import Logo from "./logo";
 
 type Props = {
   size: number;
@@ -18,7 +17,7 @@ export default function LogoWithText({ size, className }: Props) {
         className,
       )}
     >
-      <Logo size={size} />
+      <LogoIcon size={size} />
       <div
         className="text-inherit select-none"
         style={{ fontSize: size, lineHeight: `${size}px` }}

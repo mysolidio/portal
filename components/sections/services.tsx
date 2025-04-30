@@ -53,9 +53,7 @@ export default function ServicesSection({ className }: Props) {
     <section className={cn("relative text-black", className)}>
       <div className="container space-y-10 lg:space-y-15">
         <div className="mx-auto max-w-2xl *:text-center md:mx-0 md:*:text-left">
-          <div className="text-xs leading-[1.3] font-bold tracking-[18px] uppercase lg:text-[20px] lg:font-light">
-            Services
-          </div>
+          <div className="text-sub-heading">Services</div>
           <div className="mt-8 text-[32px] leading-[1.2] font-normal md:mt-4 md:font-light lg:text-[58px]">
             Your gateway to <br className="md:hidden" />
             seamless onboarding

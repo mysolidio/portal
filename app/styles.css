@@ -108,3 +108,7 @@
 @utility bg-gradient-reverse {
   @apply from-primary to-secondary bg-linear-to-l;
 }
+
+@utility text-sub-heading {
+  @apply text-[12px] leading-[1.3] font-bold tracking-[18px] uppercase lg:text-[20px] lg:font-light;
+}

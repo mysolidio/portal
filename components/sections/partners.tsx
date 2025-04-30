@@ -10,7 +10,7 @@ export default async function PartnersSection({ className }: Props) {
   return (
     <section className={cn("relative overflow-hidden", className)}>
       <div className="container">
-        <div className="text-center text-[32px] leading-[1.2] lg:text-[40px] lg:font-thin">
+        <div className="text-center text-[32px] leading-[1.2] lg:text-[40px] lg:font-light">
           Backed by the best
         </div>
         <div className="relative mt-13 w-[calc(100%+32px)] md:w-[calc(100%+80px)] lg:mt-6">

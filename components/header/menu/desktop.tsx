@@ -9,7 +9,7 @@ import {
   NavigationMenuViewport,
 } from "@/ui/navigation-menu";
 
-import DesktopContent from "./desktopContent";
+import MenuContent from "./menuContent";
 import { items } from "./types";
 
 const DesktopMenu: FC<ComponentProps<typeof NavigationMenu>> = (props) => {
@@ -22,7 +22,7 @@ const DesktopMenu: FC<ComponentProps<typeof NavigationMenu>> = (props) => {
               {item.label}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="!w-full p-0">
-              <DesktopContent item={item} />
+              <MenuContent item={item} />
             </NavigationMenuContent>
           </NavigationMenuItem>
         ))}

@@ -20,12 +20,14 @@ type Props = {
   className?: string;
   iconClassName?: string;
   linkClassName?: string;
+  dark?: boolean;
 };
 
 export default function Socials({
   className,
   iconClassName,
   linkClassName,
+  dark,
 }: Props) {
   return (
     <div className={cn("flex items-center justify-center gap-4", className)}>
@@ -36,7 +38,8 @@ export default function Socials({
           target="_blank"
           rel="noopener noreferrer"
           className={cn(
-            "grid size-8 place-content-center rounded-full bg-[#f9f9f9] text-black",
+            "grid size-8 place-content-center rounded-full",
+            dark ? "bg-black text-white" : "bg-[#f9f9f9] text-black",
             linkClassName,
           )}
         >

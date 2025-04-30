@@ -35,7 +35,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "relative z-50 w-full bg-black transition-all duration-500 ease-in-out lg:bg-[#F3F5F7] lg:py-4",
+        "bg-dark-blue relative z-50 w-full transition-all duration-500 ease-in-out lg:bg-[#F3F5F7] lg:py-4",
         isScrollUp ? "-translate-y-20 opacity-0" : "translate-y-0 opacity-100",
       )}
     >

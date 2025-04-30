@@ -1,8 +1,8 @@
 import Image from "next/image";
 
+import solutionImage0 from "@/assets/images/sec-solution-0.svg";
+import solutionImage1 from "@/assets/images/sec-solution-1.webp";
 import { cn } from "@/lib/utils";
-import solutionImage0 from "@/public/sec-solution-0.svg";
-import solutionImage1 from "@/public/sec-solution-1.webp";
 
 type Props = {
   className?: string;

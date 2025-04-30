@@ -37,6 +37,7 @@
   --default-font-family: var(--font-manrope), sans-serif;
 
   /* Spacing */
+  --spacing-11: --spacing(11);
   --spacing-15: --spacing(15);
   --spacing-18: --spacing(18);
   --spacing-25: --spacing(25);

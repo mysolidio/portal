@@ -109,7 +109,7 @@ export default function UseCasesSection({ className }: Props) {
                   <div className="text-xs leading-[1.3] font-bold lg:text-base">
                     {id}
                   </div>
-                  <div className="-m-10 space-y-2.5 overflow-hidden rounded-b-[24px] bg-linear-[180deg,rgba(1,7,129,0.00)_1.41%,#010781_56.17%] p-10">
+                  <div className="-m-7 space-y-2.5 overflow-hidden rounded-b-[24px] bg-linear-[180deg,rgba(1,7,129,0.00)_1.41%,#010781_56.17%] p-7 lg:-m-10 lg:p-10">
                     <div className="text-[22px] leading-[1.2] lg:text-[32px]">
                       {title}
                     </div>

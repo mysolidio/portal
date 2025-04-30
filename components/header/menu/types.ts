@@ -51,28 +51,24 @@ export const items: NavigationItemType[] = [
         href: "#kyc",
         description:
           "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards.",
-        comingSoon: true,
       },
       {
         label: "Defi",
         href: "#defi",
         description:
           "Enable secure, compliant DeFi applications with verified identity. Facilitate lending, borrowing, and trading with minimal friction while maintaining regulatory compliance.",
-        comingSoon: true,
       },
       {
         label: "National DID",
         href: "#digital-national-id",
         description:
           "Support sovereign digital identity solutions for governments and organizations. Create secure, privacy-preserving national ID systems with blockchain verification.",
-        comingSoon: true,
       },
       {
         label: "Anti-Sybil",
         href: "#anti-sybil",
         description:
           "Protect your platform from Sybil attacks with our unique identity verification. Ensure one-person-one-account while preserving user privacy and preventing bot activity.",
-        comingSoon: true,
       },
     ],
   },

@@ -121,7 +121,7 @@ function NavigationMenuViewport({
   return (
     <div
       className={cn(
-        "fixed top-20 left-0 isolate z-50",
+        "fixed top-20 left-0 isolate z-50 w-full",
         "transition-[transform] ease-in-out",
       )}
     >

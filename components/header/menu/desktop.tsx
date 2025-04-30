@@ -27,7 +27,7 @@ const DesktopMenu: FC<ComponentProps<typeof NavigationMenu>> = (props) => {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
-      <NavigationMenuViewport className="z-30 mt-4 !w-screen rounded-none border-0 bg-[#F3F5F7]" />
+      <NavigationMenuViewport className="z-30 mt-4 w-full rounded-none border-0 bg-[#F3F5F7]" />
     </NavigationMenu>
   );
 };

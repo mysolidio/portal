@@ -18,7 +18,7 @@ export default function SolidSection({ className }: Props) {
     >
       <div className="container">
         <div className="relative">
-          <div className="bg-gradient-reverse bg-clip-text text-[30px] text-transparent [-webkit-text-fill-color:transparent] max-lg:px-5 max-lg:font-bold lg:absolute lg:top-0 lg:left-0 lg:text-[40px]">
+          <div className="text-gradient-reverse text-[30px] max-lg:px-5 max-lg:font-bold lg:absolute lg:top-0 lg:left-0 lg:text-[40px]">
             Verify once, onboard <br className="max-lg:hidden" />
             seamlessly to 100s of <br className="max-lg:hidden" />
             Web2 & Web3 apps.

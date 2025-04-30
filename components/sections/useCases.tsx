@@ -7,31 +7,41 @@ import { cn } from "@/lib/utils";
 const useCases = [
   {
     id: "01",
-    title: "KYC",
+    title: "Verified Trust",
     description:
-      "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards.",
+      "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards",
   },
   {
     id: "02",
+    title: "Web 2 & Web 3 App On-boarding",
+    description:
+      "Verify your identity once with Solid and onboard seamlessly to hundreds of traditional finance apps, web3 exchanges & dApps, digital banks, insurance platforms, etc.",
+  },
+  {
+    id: "03",
     title: "DeFi",
     description:
       "Enable secure, compliant DeFi applications with verified identity. Facilitate lending, borrowing, and trading with minimal friction while maintaining regulatory compliance.",
   },
   {
-    id: "03",
+    id: "04",
     title: "National DID",
     description:
       "Support sovereign digital identity solutions for governments and organizations. Create secure, privacy-preserving national ID systems with blockchain verification.",
   },
   {
-    id: "04",
+    id: "05",
     title: "Anti-Sybil",
     description:
       "Protect your platform from Sybil attacks with our unique identity verification. Ensure one-person-one-account while preserving user privacy and preventing bot activity.",
   },
 ];
 
-export default function UseCasesSection() {
+type Props = {
+  className?: string;
+};
+
+export default function UseCasesSection({ className }: Props) {
   const scrollRef = useRef<HTMLUListElement>(null);
   const mouseDown = useRef(false);
   const startX = useRef(0);
@@ -59,13 +69,11 @@ export default function UseCasesSection() {
   }, []);
 
   return (
-    <section className="relative pt-15 pb-0 text-black lg:pb-20">
-      <div className="container space-y-[68px] lg:space-y-[128px]">
-        <div className="mx-auto max-w-6xl [&>*]:text-center">
-          <div className="text-xs font-light tracking-[18px] uppercase lg:text-xl">
-            Use Cases
-          </div>
-          <div className="mt-[22px] text-[32px] leading-[1.2] lg:mt-4 lg:text-[40px]">
+    <section className={cn("relative text-black", className)}>
+      <div className="container space-y-[54px] lg:space-y-[70px]">
+        <div className="mx-auto max-w-6xl *:text-center">
+          <div className="text-sub-heading">Use Cases</div>
+          <div className="mt-[22px] text-[32px] leading-[1.2] lg:mt-7 lg:text-[40px]">
             How customers use our services
           </div>
           <p className="mt-10 text-[17px] leading-[1.5] opacity-80 lg:text-[23px]">
@@ -83,26 +91,31 @@ export default function UseCasesSection() {
             onMouseUp={stopDragging}
             onMouseMove={move}
             className={cn(
-              "scroll-hidden relative -mb-[3*var(--padding-offset)] flex w-full scroll-px-4 gap-6 overflow-x-auto",
+              "scroll-hidden relative -mb-[3*var(--padding-offset)] flex w-full scroll-px-4 gap-4 overflow-x-auto lg:gap-5",
               "cursor-grab select-none active:cursor-grabbing",
             )}
           >
             {useCases.map(({ id, title, description }, idx) => (
               <li
                 key={idx}
-                className="border-linear-gradient relative z-0 aspect-square w-[calc(100%-64px)] shrink-0 shadow [--radius:24px] first:ml-4 last:mr-4 md:size-[482px]"
+                className="relative z-0 aspect-square w-[calc(100%-64px)] shrink-0 rounded-[24px] shadow first:ml-4 last:mr-4 md:size-[482px]"
               >
                 <div
-                  className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] p-10 text-white"
+                  className="relative flex size-full flex-col justify-between gap-10 rounded-[24px] bg-cover bg-no-repeat p-7 text-white lg:p-10"
                   style={{
-                    background: `radial-gradient(163.67% 163.67% at 50% 146.15%, #492B5C 11.59%, #BFA3D1 63.31%, #C1D2FF 93.59%), url(/sec-use_case-${idx}.webp) lightgray 50% / cover no-repeat`,
-                    backgroundBlendMode: "hard-light, normal",
+                    backgroundImage: `url(/sec-use_case-${idx}.webp)`,
                   }}
                 >
-                  <div className="text-base font-bold">{id}</div>
-                  <div className="-m-10 space-y-2.5 overflow-hidden rounded-b-[24px] bg-linear-[180deg,rgba(35,23,67,0.00)_1.41%,#170E2A_56.17%] p-10">
-                    <div className="text-[33px] leading-[1.2]">{title}</div>
-                    <div className="text-base opacity-80">{description}</div>
+                  <div className="text-xs leading-[1.3] font-bold lg:text-base">
+                    {id}
+                  </div>
+                  <div className="-m-10 space-y-2.5 overflow-hidden rounded-b-[24px] bg-linear-[180deg,rgba(1,7,129,0.00)_1.41%,#010781_56.17%] p-10">
+                    <div className="text-[22px] leading-[1.2] lg:text-[32px]">
+                      {title}
+                    </div>
+                    <div className="text-[11px] leading-[1.3] opacity-80 lg:text-[15px]">
+                      {description}
+                    </div>
                   </div>
                 </div>
               </li>

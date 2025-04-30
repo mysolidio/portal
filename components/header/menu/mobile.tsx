@@ -45,7 +45,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                 >
                   {label}
                 </Link>
-                <div className="h-[0.5px] bg-white last:bg-transparent" />
+                <div className="h-[0.5px] bg-[#F3F5F7] last:bg-transparent" />
               </Fragment>
             ))}
           </div>

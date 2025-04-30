@@ -1,5 +1,7 @@
 import { ChevronDownIcon } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 const items = [
   {
     question:
@@ -31,9 +33,13 @@ const items = [
   },
 ];
 
-export default function FAQsSection() {
+type Props = {
+  className?: string;
+};
+
+export default function FAQsSection({ className }: Props) {
   return (
-    <section className="relative py-16 text-black lg:py-24">
+    <section className={cn("relative text-black", className)}>
       <div className="container lg:max-w-5xl">
         <div className="text-center text-[32px] leading-[1.2] lg:text-[48px]">
           Frequently asked questions
@@ -45,12 +51,12 @@ export default function FAQsSection() {
               className="group rounded-[16px] border border-[#252525] p-4 transition-all select-none lg:rounded-[24px] lg:p-6"
             >
               <summary className="flex cursor-pointer items-center justify-between gap-6 [&::-webkit-details-marker]:hidden [&::marker]:hidden">
-                <div className="text-base group-open:font-bold lg:font-bold">
+                <div className="text-base leading-[1.3] font-bold opacity-80">
                   {question}
                 </div>
                 <ChevronDownIcon className="size-4 shrink-0 transition-transform duration-300 group-open:rotate-180" />
               </summary>
-              <div className="mt-4 rounded-[8px] bg-gradient-to-t from-[#2D2D2D] from-[-300%] to-white p-4 text-sm leading-[1.5] opacity-80 md:backdrop-blur-[6.5px] lg:rounded-[16px] lg:p-6">
+              <div className="mt-4 p-4 text-sm leading-[1.5] opacity-80 lg:px-0 lg:py-6">
                 {answer}
               </div>
             </details>

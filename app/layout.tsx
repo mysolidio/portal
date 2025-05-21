@@ -1,3 +1,4 @@
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Manrope, Poppins } from "next/font/google";
 
@@ -33,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="G-EG61HH403G" />
       <body className={`${poppins.variable} ${manrope.variable} bg-[#F3F5F7]`}>
         {children}
       </body>

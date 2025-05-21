@@ -34,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="G-EG61HH403G" />
+      <GoogleTagManager gtmId="GTM-WGFL9D7R" />
       <body className={`${poppins.variable} ${manrope.variable} bg-[#F3F5F7]`}>
         {children}
       </body>

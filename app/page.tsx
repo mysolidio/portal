@@ -10,7 +10,7 @@ import UseCases from "@/components/sections/useCases";
 
 export default function Home() {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <Header />
       <Hero className="mt-4 lg:mt-12" />
       <Solution className="mt-2.5 lg:mt-25" />

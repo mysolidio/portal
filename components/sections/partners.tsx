@@ -14,7 +14,7 @@ export default async function PartnersSection({ className }: Props) {
           Backed by the best
         </div>
         <div className="relative mt-13 w-[calc(100%+32px)] md:w-[calc(100%+80px)] lg:mt-6">
-          <div className="animate-scroll-infinite hover:paused flex w-fit gap-18 lg:gap-28">
+          <div className="scroll-infinite-x [--gap:72px] lg:[--gap:112px]">
             {Array.from({ length: 14 }).map((_, idx) => (
               <div key={idx} className="relative size-[170px] shrink-0">
                 {/* Duplicate set of logos for seamless loop */}

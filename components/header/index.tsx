@@ -30,7 +30,7 @@ export default function Header() {
     return () => {
       window.removeEventListener("scroll", onScroll);
     };
-  }, [setIsScrollUp]);
+  }, []);
 
   return (
     <header

@@ -89,10 +89,7 @@ export default function Footer({ className }: Props) {
       <div className="relative container grid grid-cols-1 gap-y-10 px-10 md:grid-cols-[1fr_auto] md:gap-x-15 md:px-4 lg:px-8">
         <div className="place-self-center md:place-self-start">
           <LogoWithText size={48} className="text-white" />
-          <Socials
-            className="mt-4 gap-2 md:justify-start"
-            linkClassName="size-8"
-          />
+          <Socials className="mt-4 gap-2 md:justify-start" variant="light" />
         </div>
         <ul className="flex flex-col gap-6 md:flex-row lg:gap-10">
           {itemGroups.map(({ title, items }, idx) => (

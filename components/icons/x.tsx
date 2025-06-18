@@ -1,18 +1,19 @@
-import { SVGProps } from "react";
+import { cn } from "@/lib/utils";
 
-export default function X({ className, ...props }: SVGProps<SVGSVGElement>) {
+import { SvgIconProps } from "./types";
+
+export default function X({ className, size }: SvgIconProps) {
   return (
     <svg
-      width="1em"
-      height="1em"
-      viewBox="0 0 17 16"
+      className={cn("shrink-0", className)}
+      width={size ?? "1em"}
+      height={size ?? "1em"}
+      viewBox="0 0 17 17"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      {...props}
     >
       <path
-        d="m12.2914 2.04199-3.33071 3.80734-2.88-3.80734h-4.17267l4.98467 6.51734-4.724 5.39937h2.02266l3.646-4.16671 3.18665 4.16671h4.068l-5.19598-6.86937 4.41668-5.04734zm-.7094 10.70671-7.31265-9.56071h1.202l7.23065 9.56001z"
+        d="M11.9087 2.39551L8.57806 6.20284L5.69806 2.39551H1.52539L6.51006 8.91284L1.78606 14.3122H3.80872L7.45472 10.1455L10.6414 14.3122H14.7094L9.51339 7.44284L13.9301 2.39551H11.9087ZM11.1994 13.1022L3.88672 3.54151H5.08872L12.3194 13.1015L11.1994 13.1022Z"
         fill="currentColor"
       />
     </svg>

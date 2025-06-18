@@ -69,7 +69,7 @@ export default function UseCasesSection({ className }: Props) {
   }, []);
 
   return (
-    <section className={cn("relative text-black", className)}>
+    <section id="use-cases" className={cn("relative text-black", className)}>
       <div className="container space-y-[54px] lg:space-y-[70px]">
         <div className="mx-auto max-w-6xl *:text-center">
           <div className="text-sub-heading">Use Cases</div>

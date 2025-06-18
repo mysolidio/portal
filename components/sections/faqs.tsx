@@ -39,7 +39,7 @@ type Props = {
 
 export default function FAQsSection({ className }: Props) {
   return (
-    <section className={cn("relative text-black", className)}>
+    <section id="faqs" className={cn("relative text-black", className)}>
       <div className="container lg:max-w-5xl">
         <div className="text-center text-[32px] leading-[1.2] lg:text-[48px]">
           Frequently asked questions

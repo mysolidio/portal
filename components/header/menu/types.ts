@@ -1,15 +1,15 @@
 export type SubItemType = {
   label: string;
-  href: string;
+  href?: string;
   description?: string;
+  shortDescription?: string;
   comingSoon?: boolean;
   newTab?: boolean;
 };
 
 export type NavigationItemType = {
   label: string;
-  href: string;
-  description?: string;
+  href?: string;
   subItems: SubItemType[];
 };
 
@@ -20,53 +20,46 @@ export const items: NavigationItemType[] = [
     subItems: [
       {
         label: "KYC Lifecycle Management",
-        href: "#kyc-lifecycle-management",
-        comingSoon: true,
+        shortDescription: "Streamlined KYC process from start to finish",
       },
       {
         label: "Onchain KYC SDK",
-        href: "#onchain-kyc-sdk",
-        comingSoon: true,
+        shortDescription:
+          "Modular SDK for unified Web2 and Web3 interoperability",
       },
       {
         label: "Fraud Detection",
-        href: "#fraud-detection",
-        comingSoon: true,
+        shortDescription:
+          "On/off-chain compliance, AML, KYC & FATF alignment - built for all",
       },
       {
         label: "Periodic AML Compliance Checker",
-        href: "#periodic-aml-compliance-checker",
-        comingSoon: true,
+        shortDescription:
+          "Regulatory-grade AML compliance audits and ongoing checks",
       },
     ],
   },
   {
     label: "Use Cases",
     href: "#use-cases",
-    description:
-      "Explore how our identity solutions solve real-world challenges across multiple industries with secure, compliant verification processes.",
     subItems: [
       {
         label: "KYC",
-        href: "#kyc",
         description:
           "Streamline Know Your Customer processes with our secure identity verification system. Seamlessly onboard users while ensuring full compliance with global regulations and standards.",
       },
       {
-        label: "Defi",
-        href: "#defi",
+        label: "Decentralized Finance",
         description:
           "Enable secure, compliant DeFi applications with verified identity. Facilitate lending, borrowing, and trading with minimal friction while maintaining regulatory compliance.",
       },
       {
-        label: "National DID",
-        href: "#digital-national-id",
+        label: "National D.I.D",
         description:
           "Support sovereign digital identity solutions for governments and organizations. Create secure, privacy-preserving national ID systems with blockchain verification.",
       },
       {
         label: "Anti-Sybil",
-        href: "#anti-sybil",
         description:
           "Protect your platform from Sybil attacks with our unique identity verification. Ensure one-person-one-account while preserving user privacy and preventing bot activity.",
       },
@@ -74,43 +67,34 @@ export const items: NavigationItemType[] = [
   },
   {
     label: "Develop",
-    href: "#develop",
     subItems: [
       {
         label: "Documentation",
-        href: "#documentation",
         comingSoon: true,
       },
       {
         label: "API Reference",
-        href: "#api-reference",
         comingSoon: true,
       },
     ],
   },
   {
     label: "Learn",
-    href: "#learn",
     subItems: [
       {
         label: "Blog",
-        href: "#blog",
-        comingSoon: true,
+        shortDescription: "Keep up with Solid news",
       },
       {
         label: "Whitepaper",
+        shortDescription: "Learn more about our Vision",
         href: "https://docsend.com/v/mdysq/solid_whitepaper",
         newTab: true,
       },
       {
-        label: "What is Onchain KYC?",
-        href: "#what-is-onchain-kyc",
-        comingSoon: true,
-      },
-      {
-        label: "What is Verifiable Credential?",
-        href: "#what-is-verifiable-credential",
-        comingSoon: true,
+        label: "Frequently Asked Questions",
+        shortDescription: "Answers to common questions about Solid",
+        href: "#faqs",
       },
     ],
   },

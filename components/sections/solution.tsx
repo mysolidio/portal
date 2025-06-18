@@ -10,7 +10,7 @@ type Props = {
 
 export default function SolutionSection({ className }: Props) {
   return (
-    <section className={cn("relative text-black", className)}>
+    <section id="solutions" className={cn("relative text-black", className)}>
       <div className="container">
         <div className="flex items-center max-md:flex-col md:gap-10 lg:gap-16 xl:gap-24">
           <div className="relative w-full shrink-0 place-items-center gap-5 max-md:p-[16px_24px] md:w-[240px] lg:grid lg:w-[480px] lg:grid-cols-2">

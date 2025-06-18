@@ -60,6 +60,9 @@
       "liga" off,
       "clig" off;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
     @apply bg-background text-foreground;
   }

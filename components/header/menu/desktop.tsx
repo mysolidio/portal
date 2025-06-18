@@ -22,7 +22,7 @@ const DesktopMenu: FC<ComponentProps<typeof NavigationMenu>> = (props) => {
               {item.label}
             </NavigationMenuTrigger>
             <NavigationMenuContent className="!w-full p-0">
-              <MenuContent item={item} />
+              <MenuContent data={item} />
             </NavigationMenuContent>
           </NavigationMenuItem>
         ))}

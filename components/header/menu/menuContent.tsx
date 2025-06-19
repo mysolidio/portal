@@ -1,26 +1,39 @@
 import { Separator } from "@radix-ui/react-separator";
 import { ChevronsDown } from "lucide-react";
-import Link, { LinkProps } from "next/link";
-import { FC, PropsWithChildren, useState } from "react";
+import {
+  FC,
+  PropsWithChildren,
+  useState,
+  useContext,
+  createContext,
+} from "react";
 
+import Link, { CustomLinkProps } from "@/common/customLink";
 import Socials from "@/common/socials";
 import { cn } from "@/lib/utils";
 
 import { NavigationItemType, SubItemType } from "./types";
 
-type SubItemProps = Omit<LinkProps, "href"> & {
+type SubItemProps = Omit<CustomLinkProps, "href"> & {
   data: NavigationItemType["subItems"][0];
   isActive?: boolean;
   isMobile?: boolean;
+  onBeforeNavigate?: () => Promise<void>;
 };
+
+// Context for onBeforeNavigate
+const OnBeforeNavigateContext = createContext<
+  (() => Promise<void>) | undefined
+>(undefined);
+
 const SubItem: FC<SubItemProps> = ({
   data,
   isActive,
   isMobile,
-  onClick,
   onMouseEnter,
   ...props
 }) => {
+  const onBeforeNavigate = useContext(OnBeforeNavigateContext);
   const { href, label, newTab, shortDescription, comingSoon } = data;
   return (
     <Link
@@ -32,13 +45,8 @@ const SubItem: FC<SubItemProps> = ({
         "group border-b-[0.5px] border-[#717171]/50 text-[#AAA]",
         isMobile ? "block space-y-1 pb-1" : "space-y-0.5 pb-3 *:line-clamp-1",
       )}
+      onBeforeNavigate={onBeforeNavigate}
       onMouseEnter={onMouseEnter}
-      onClick={(e) => {
-        if (!href) {
-          e.preventDefault();
-        }
-        onClick?.(e);
-      }}
     >
       <div
         className={cn(
@@ -102,6 +110,7 @@ const DesktopLayout: FC<LayoutProps> = ({ children, href }) => {
 };
 
 const MobileLayout: FC<LayoutProps> = ({ children, href }) => {
+  const onBeforeNavigate = useContext(OnBeforeNavigateContext);
   return (
     <div className="py-6">
       {children}
@@ -110,6 +119,7 @@ const MobileLayout: FC<LayoutProps> = ({ children, href }) => {
           <Link
             href={href}
             className="inline-flex items-center gap-1 text-xs leading-4 font-bold underline"
+            onBeforeNavigate={onBeforeNavigate}
           >
             Learn More
             <ChevronsDown className="size-5" />
@@ -123,7 +133,9 @@ const MobileLayout: FC<LayoutProps> = ({ children, href }) => {
 type Props = {
   data: NavigationItemType;
   isMobile?: boolean;
+  onBeforeNavigate?: () => Promise<void>;
 };
+
 const Content: FC<Props> = ({ data, isMobile }) => {
   const { subItems } = data;
   const hasDescriptions = subItems.some((item) => !!item.description);
@@ -197,12 +209,14 @@ const Content: FC<Props> = ({ data, isMobile }) => {
   );
 };
 
-const MenuContent: FC<Props> = ({ data, isMobile }) => {
+const MenuContent: FC<Props> = ({ data, isMobile, onBeforeNavigate }) => {
   if (isMobile) {
     return (
-      <MobileLayout href={data.href}>
-        <Content data={data} isMobile />
-      </MobileLayout>
+      <OnBeforeNavigateContext.Provider value={onBeforeNavigate}>
+        <MobileLayout href={data.href}>
+          <Content data={data} isMobile />
+        </MobileLayout>
+      </OnBeforeNavigateContext.Provider>
     );
   }
   return (

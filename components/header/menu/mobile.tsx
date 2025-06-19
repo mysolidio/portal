@@ -64,7 +64,14 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                 <summary className="cursor-pointer list-none py-6 text-[32px] leading-[1.2] before:hidden [&::-webkit-details-marker]:hidden [&::marker]:hidden">
                   {item.label}
                 </summary>
-                <MenuContent isMobile data={item} />
+                <MenuContent
+                  isMobile
+                  data={item}
+                  onBeforeNavigate={async () => {
+                    setIsOpen(false);
+                    await new Promise((resolve) => setTimeout(resolve, 400));
+                  }}
+                />
               </details>
             ))}
           </div>

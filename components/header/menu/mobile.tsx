@@ -69,7 +69,7 @@ const MobileMenu: FC<MobileMenuProps> = ({ isOpen, setIsOpen }) => {
                   data={item}
                   onBeforeNavigate={async () => {
                     setIsOpen(false);
-                    await new Promise((resolve) => setTimeout(resolve, 400));
+                    await new Promise((resolve) => setTimeout(resolve, 600));
                   }}
                 />
               </details>
